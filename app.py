@@ -74,7 +74,7 @@ async def dashboard(
     if mode == "read":
         
         if password != CLIENT_PASSWORD:
-
+        
           return """
            <html>
 
@@ -132,63 +132,8 @@ async def dashboard(
 
             </html>
             """
-        return """
-        <html>
-
-        <head>
-
-        <meta charset="UTF-8">
-
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        </head>
-
-        <body class="bg-slate-100 flex items-center justify-center h-screen">
-
-            <form
-            class="bg-white p-10 rounded-3xl shadow-lg w-[360px]"
-            method="get"
-            >
-
-                <input
-                type="hidden"
-                name="mode"
-                value="read"
-                >
-
-                <div class="text-2xl font-black text-indigo-700 mb-2">
-
-                    Billing Control
-
-                </div>
-
-                <div class="text-slate-500 text-sm mb-6">
-
-                    Введите пароль
-
-                </div>
-
-                <input
-                type="password"
-                name="password"
-                class="w-full border rounded-2xl p-4 mb-4"
-                placeholder="Пароль"
-                >
-
-                <button
-                class="w-full bg-indigo-700 text-white rounded-2xl p-4 font-black"
-                >
-
-                    Войти
-
-                </button>
-
-            </form>
-
-        </body>
-
-        </html>
-        """
+        
+        is_readonly = mode == "read" and password == CLIENT_PASSWORD
         today = datetime.date.today()
 
     
