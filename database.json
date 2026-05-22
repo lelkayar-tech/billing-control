@@ -1,0 +1,2084 @@
+[
+    {
+        "id": 1,
+        "app_no": "",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13188",
+        "service": "Медиафасады Пушкино Парк, Купавна, июнь",
+        "period": "ИЮНЬ",
+        "total_sum": 244000.0,
+        "deadline": "",
+        "payments": [],
+        "status": "",
+        "status_date": ""
+    },
+    {
+        "id": 2,
+        "app_no": "",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13183",
+        "service": "ООН: Красина, июнь",
+        "period": "ИЮНЬ",
+        "total_sum": 66734.0,
+        "deadline": "",
+        "payments": [],
+        "status": "",
+        "status_date": ""
+    },
+    {
+        "id": 3,
+        "app_no": "-",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13182",
+        "service": "Рынок Самара, новое место, июнь",
+        "period": "ИЮН",
+        "total_sum": 39894.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-",
+        "status_date": ""
+    },
+    {
+        "id": 4,
+        "app_no": "-",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13181",
+        "service": "Аэропорт Якутск, июнь",
+        "period": "ИЮН",
+        "total_sum": 99064.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 5,
+        "app_no": "-",
+        "entity": "МКК",
+        "bill_no": "ОМ-13179",
+        "service": "Принц Плаза двери, июнь",
+        "period": "ИЮН",
+        "total_sum": 99308.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 6,
+        "app_no": "-",
+        "entity": "МКК",
+        "bill_no": "ОМ-13179",
+        "service": "Принц Плаза двери, июнь",
+        "period": "ИЮН",
+        "total_sum": 99308.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 7,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13065",
+        "service": "Рынки Хабаровск, май",
+        "period": "ИЮН",
+        "total_sum": 22936.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 8,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13177",
+        "service": "Рынки Хабаровск, июнь",
+        "period": "ИЮН",
+        "total_sum": 120902.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 9,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13063",
+        "service": "Транспорт Мск, май",
+        "period": "МАЙ",
+        "total_sum": 35258.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 11,
+        "app_no": "",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13174",
+        "service": "Сенной ТЦ стойка, июнь",
+        "period": "ИЮН",
+        "total_sum": 39966.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 12,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13173",
+        "service": "Сенной рынок, Сенной ТЦ, июнь",
+        "period": "ИЮН",
+        "total_sum": 103212.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 13,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13172",
+        "service": "Карнавал, июнь",
+        "period": "ИЮН",
+        "total_sum": 9760.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 14,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13171",
+        "service": "Рынки Томск, Кемерово, Владикавказ, Самара, июнь",
+        "period": "ИЮН",
+        "total_sum": 64965.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 15,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13153",
+        "service": "Казанский, июнь",
+        "period": "ИЮН",
+        "total_sum": 363987.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 16,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13152",
+        "service": "ООН: Доватора, ГБШ, Хилок, июнь",
+        "period": "ИЮН",
+        "total_sum": 303048.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 17,
+        "app_no": "",
+        "entity": "МКК",
+        "bill_no": "ОМ-13151",
+        "service": "Диджитал, июнь",
+        "period": "ИЮН",
+        "total_sum": 934825.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 18,
+        "app_no": "",
+        "entity": "БЦ",
+        "bill_no": "ОМ-13123",
+        "service": "Лифты Якутск",
+        "period": "ИЮН",
+        "total_sum": 156160.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 19,
+        "app_no": "нет",
+        "entity": "ЗК",
+        "bill_no": "ОМ-13115",
+        "service": "Букет Ташкент",
+        "period": "МАЙ",
+        "total_sum": 10860.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 10860.0,
+                "comment": "",
+                "date": "06.05.2026",
+                "due_date": "",
+                "status": "paid",
+                "fact_date": ""
+            }
+        ],
+        "status": "-",
+        "status_date": "06.05.2026"
+    },
+    {
+        "id": 20,
+        "app_no": "",
+        "entity": "БЦ",
+        "bill_no": "ОМ-13113",
+        "service": "Якутия, радио",
+        "period": "МАЙ",
+        "total_sum": 138592.0,
+        "deadline": "",
+        "payments": [],
+        "status": "-"
+    },
+    {
+        "id": 21,
+        "app_no": "65",
+        "entity": "БЦ",
+        "bill_no": "ОМ-13093",
+        "service": "Якутия, сайты, май",
+        "period": "МАЙ",
+        "total_sum": 83204.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "08.05.2026"
+    },
+    {
+        "id": 22,
+        "app_no": "369",
+        "entity": "МКК",
+        "bill_no": "ОМ-12799",
+        "service": "Садовод, путеводитель",
+        "period": "МАЙ",
+        "total_sum": 42334.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026"
+    },
+    {
+        "id": 23,
+        "app_no": "310",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13071",
+        "service": "ООН: Красина, май",
+        "period": "МАЙ",
+        "total_sum": 66734.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "08.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/UH1U/rudruN9mD",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 24,
+        "app_no": "368",
+        "entity": "МКК",
+        "bill_no": "ОМ-13072",
+        "service": "ООН: Доватора, ГБШ, Хилок, май ",
+        "period": "МАЙ",
+        "total_sum": 303048.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/W1hY/AFSR34aLo",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 25,
+        "app_no": "309",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13070",
+        "service": "Рынок Самара, новое место, май",
+        "period": "МАЙ",
+        "total_sum": 39894.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "05.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/Xgt5/BCrezvEWG",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 26,
+        "app_no": "308",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13069",
+        "service": "Аэропорт Якутск, май",
+        "period": "МАЙ",
+        "total_sum": 99064.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "05.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/zfpE/AZUYPKRuh",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 27,
+        "app_no": "307",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13068",
+        "service": "Принц Плаза двери, май",
+        "period": "МАЙ",
+        "total_sum": 99308.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "05.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/LAvU/omLCex7WS",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 28,
+        "app_no": "367",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13067",
+        "service": "Принц Плаза двери, май",
+        "period": "МАЙ",
+        "total_sum": 99308.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/Qm4f/QhaUnCxZB",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 29,
+        "app_no": "306",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13066",
+        "service": "Рынки Хабаровск, май",
+        "period": "МАЙ",
+        "total_sum": 22936.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "05.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/49yU/DbFhKCSei",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 30,
+        "app_no": "366",
+        "entity": "МКК",
+        "bill_no": "ОМ-13065",
+        "service": "Рынки Хабаровск, май",
+        "period": "МАЙ",
+        "total_sum": 120902.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/cSPQ/3S9CFnaVC",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 31,
+        "app_no": "305",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13064",
+        "service": "Транспорт Мск, май",
+        "period": "МАЙ",
+        "total_sum": 35258.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "05.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/tPGB/m3VyLQ4BF",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 32,
+        "app_no": "365",
+        "entity": "МКК",
+        "bill_no": "ОМ-13063",
+        "service": "Транспорт Мск, май",
+        "period": "МАЙ",
+        "total_sum": 35258.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/3DR8/eNKBP9SfG",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 33,
+        "app_no": "304",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13062",
+        "service": "Сенной ТЦ стойка, май",
+        "period": "МАЙ",
+        "total_sum": 39966.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "05.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/a277/TEDbCmimb",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 34,
+        "app_no": "364",
+        "entity": "МКК",
+        "bill_no": "ОМ-13061",
+        "service": "Сенной рынок, Сенной ТЦ, май",
+        "period": "МАЙ",
+        "total_sum": 103212.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/s1FR/hUSF2HpmL",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 35,
+        "app_no": "363",
+        "entity": "МКК",
+        "bill_no": "ОМ-13060",
+        "service": "Карнавал, май",
+        "period": "МАЙ",
+        "total_sum": 9760.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/xxvd/17KmaqnGo",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 36,
+        "app_no": "362",
+        "entity": "МКК",
+        "bill_no": "ОМ-13059",
+        "service": "Рынки Томск, Кемерово, Владикавказ, Самара, май",
+        "period": "МАЙ",
+        "total_sum": 64965.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/6FVm/Avfd3i13b",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 37,
+        "app_no": "361",
+        "entity": "МКК",
+        "bill_no": "ОМ-13041",
+        "service": "Диджитал, май",
+        "period": "МАЙ",
+        "total_sum": 934825.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/7ngs/RVxVcJAc4",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 38,
+        "app_no": "302",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13036",
+        "service": "Фудсити фасад 10 вход, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 495930.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 165310.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "15.05.2026",
+                "date": "2026-05-15",
+                "type": "plan",
+                "status": "paid"
+            },
+            {
+                "amount": 165310.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 165310.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/pN4F/3MasuihKR",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 39,
+        "app_no": "303",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13035",
+        "service": "Входные группы Фудсити, ДП: 3, 10, 13, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 488061.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 162687.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "13.05.2026",
+                "status": "paid",
+                "date": "2026-05-13"
+            },
+            {
+                "amount": 162687.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 162687.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "14.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/35mh/5nyLS5Afa",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 40,
+        "app_no": "301",
+        "entity": "МКК",
+        "bill_no": "ОМ-13034",
+        "service": "Фудсити атриум, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 301950.0,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "14.04.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/nbFv/JiognK5Zr",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 41,
+        "app_no": "360",
+        "entity": "МКК",
+        "bill_no": "ОМ-13033",
+        "service": "Фудсити атриум, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 301950.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 100650.0,
+                "comment": "АПРЕЛЬ",
+                "date": "15.05.2026",
+                "due_date": "",
+                "status": "paid",
+                "fact_date": ""
+            },
+            {
+                "amount": 100650.0,
+                "comment": "МАЙ",
+                "date": "",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 100650.0,
+                "comment": "ИЮНЬ",
+                "date": "",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "15.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 43,
+        "app_no": "358",
+        "entity": "МКК",
+        "bill_no": "ОМ-13031",
+        "service": "Фасад Фудсити (2 места), апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 1359080.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 323910.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "14.05.2026",
+                "status": "paid",
+                "date": "2026-05-14"
+            },
+            {
+                "amount": 323910.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "paid",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 323910.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "paid",
+                "date": "2026-06-30"
+            },
+            {
+                "amount": 387350.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "due_date": "14.05.2026",
+                "status": "paid",
+                "date": "2026-05-14"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/7Cqh/F494q3GBP",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 44,
+        "app_no": "300",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12957",
+        "service": "Хостел Фудсити холл, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 124440.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 41480.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "20.05.2026",
+                "status": "paid",
+                "date": "2026-05-20"
+            },
+            {
+                "amount": 41480.0,
+                "comment": "МАЙ",
+                "due_date": "20.05.2026",
+                "status": "waiting",
+                "date": "2026-05-20"
+            },
+            {
+                "amount": 41480.0,
+                "comment": "ИЮНЬ",
+                "due_date": "20.06.2026",
+                "status": "waiting",
+                "date": "2026-06-20"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/xqxB/aKJgeVPUH",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 45,
+        "app_no": "356",
+        "entity": "МКК",
+        "bill_no": "ОМ-12956",
+        "service": "Хостел Фудсити лифт, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 186660.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 62220.0,
+                "comment": "АПРЕЛЬ",
+                "date": "",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 62220.0,
+                "comment": "МАЙ",
+                "date": "",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 62220.0,
+                "comment": "ИЮНЬ",
+                "date": "",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "15.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/F19a/y9b63GAkp",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 46,
+        "app_no": "355",
+        "entity": "МКК",
+        "bill_no": "ОМ-12952",
+        "service": "ТЯК Москва, пилларсы, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 198006.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 66002.0,
+                "comment": "АПРЕЛЬ",
+                "date": "2026-04-30",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 66002.0,
+                "comment": "МАЙ",
+                "date": "2026-05-31",
+                "due_date": "",
+                "status": "waiting"
+            },
+            {
+                "amount": 66002.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "28.04.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/ehqX/uRGWgCs2R",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/ehqX/uRGWgCs2R",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 47,
+        "app_no": "299",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12951",
+        "service": "ТЯК Москва, пилларсы, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 198006.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 66002.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "18.05.2026",
+                "status": "paid",
+                "date": "2026-05-18"
+            },
+            {
+                "amount": 66002.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 66002.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/NhUF/cgohqbzQE",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/NhUF/cgohqbzQE",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 48,
+        "app_no": "298",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12950",
+        "service": "ТЯК Москва экраны, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 495015.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 165005.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "18.05.2026",
+                "status": "paid",
+                "date": "2026-05-18"
+            },
+            {
+                "amount": 165005.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 165005.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/GjhS/rX9jFR7rs",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/GjhS/rX9jFR7rs",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 49,
+        "app_no": "297",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12949",
+        "service": "Садовод, фасадные баннеры, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 472506.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 157502.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "15.05.2026",
+                "status": "paid",
+                "date": "2026-05-15"
+            },
+            {
+                "amount": 157502.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 157502.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-05-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/ehqX/uRGWgCs2R",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/ehqX/uRGWgCs2R",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 50,
+        "app_no": "354",
+        "entity": "МКК",
+        "bill_no": "ОМ-12948",
+        "service": "Садовод (2 места), плакаты Юнона, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 316956.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 105652.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "paid",
+                "date": "2026-04-30"
+            },
+            {
+                "amount": 105652.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "paid",
+                "date": "2026-05-31"
+            },
+            {
+                "amount": 105652.0,
+                "comment": "ИЮНЬ",
+                "due_date": "30.06.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/PPEF/7pWMSRGE4",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/PPEF/7pWMSRGE4",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 51,
+        "app_no": "357",
+        "entity": "МКК",
+        "bill_no": "ОМ-12906",
+        "service": "Входные группы Фудсити, МКК: 2, 5, 11, 12, 16, апр-июнь",
+        "period": "АПР, МАЙ, ИЮН",
+        "total_sum": 917745.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 104310.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "date": "15.05.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 271145.0,
+                "comment": "АПРЕЛЬ",
+                "date": "15.05.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 271145.0,
+                "comment": "МАЙ",
+                "date": "15.05.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 271145.0,
+                "comment": "ИЮНЬ",
+                "date": "15.05.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "15.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/P26K/DL5YjrAar",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 52,
+        "app_no": "296",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12828",
+        "service": "Автовокзалы Нск, апр-май",
+        "period": "АПР, МАЙ",
+        "total_sum": 108458.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 27816.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "due_date": "11.05.2026",
+                "status": "paid",
+                "date": "2026-05-11"
+            },
+            {
+                "amount": 40321.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "18.05.2026",
+                "status": "paid",
+                "date": "2026-05-18"
+            },
+            {
+                "amount": 40321.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "12.05.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/ftNZ/WiBG1tqoF",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/ftNZ/WiBG1tqoF",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 53,
+        "app_no": "351",
+        "entity": "МКК",
+        "bill_no": "ОМ-12812",
+        "service": "Лифты Котельники, апр-май",
+        "period": "АПР, МАЙ",
+        "total_sum": 37088.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 18544.0,
+                "comment": "АПРЕЛЬ",
+                "date": "28.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 18544.0,
+                "comment": "МАЙ",
+                "date": "28.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "28.04.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/6yMg/aD9DygSnX",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/6yMg/aD9DygSnX",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 54,
+        "app_no": "353",
+        "entity": "МКК",
+        "bill_no": "ОМ-12947",
+        "service": "ООН: Доватора, ГБШ, Хилок, апрель",
+        "period": "АПР",
+        "total_sum": 303048.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 303048.0,
+                "comment": "АПРЕЛЬ",
+                "date": "28.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "28.04.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/RiwH/G6rS4JbBp",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 55,
+        "app_no": "352",
+        "entity": "МКК",
+        "bill_no": "ОМ-12946",
+        "service": "Диджитал, апрель",
+        "period": "АПР",
+        "total_sum": 934825.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 934825.0,
+                "comment": "АПРЕЛЬ",
+                "date": "28.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "28.04.2026",
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/u8bt/BdpohJPBo",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 56,
+        "app_no": "350",
+        "entity": "МКК",
+        "bill_no": "ОМ-12814",
+        "service": "Казанский, март-май",
+        "period": "МАР, АПР, МАЙ",
+        "total_sum": 1091961.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 363987.0,
+                "comment": "МАРТ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 363987.0,
+                "comment": "АПРЕЛЬ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 363987.0,
+                "comment": "МАЙ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "07.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/GXCb/8kyfAEzGC",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/GXCb/8kyfAEzGC",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/GXCb/8kyfAEzGC",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 57,
+        "app_no": "295",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12772",
+        "service": "Медиафасады Пушкино Парк, Купавна, март-май",
+        "period": "МАР, АПР, МАЙ",
+        "total_sum": 732000.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 244000.0,
+                "comment": "МАРТ",
+                "date": "2026-04-05",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 244000.0,
+                "comment": "АПРЕЛЬ",
+                "date": "2026-04-30",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 244000.0,
+                "comment": "МАЙ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "01.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/R46G/sqXeiqEFc",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/R46G/sqXeiqEFc",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "https://cloud.mail.ru/public/R46G/sqXeiqEFc",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 58,
+        "app_no": "294",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12843",
+        "service": "Рынок Самара, новое место, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 95648.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 15860.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 39894.0,
+                "comment": "МАРТ",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 39894.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "waiting",
+                "date": "2026-04-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "27.03.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/PWWF/7e5EWmiB8",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/PWWF/7e5EWmiB8",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 59,
+        "app_no": "288",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12842",
+        "service": "ООН: Красина, март-апрель",
+        "period": "МАР, АПР",
+        "total_sum": 142130.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 8662.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 66734.0,
+                "comment": "МАРТ",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 66734.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "waiting",
+                "date": "2026-04-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "27.03.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/64Sg/9EnGvWYeJ",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/64Sg/9EnGvWYeJ",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 60,
+        "app_no": "349",
+        "entity": "МКК",
+        "bill_no": "ОМ-12813",
+        "service": "Рынки Томск, Кемерово, Владикавказ, Самара, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 129930.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 64965.0,
+                "comment": "МАРТ",
+                "date": "10.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 64965.0,
+                "comment": "АПРЕЛЬ",
+                "date": "10.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "10.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/rocK/Ufg29H7Mg",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/rocK/Ufg29H7Mg",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 61,
+        "app_no": "293",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12811",
+        "service": "Принц Плаза двери, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 198616.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 99308.0,
+                "comment": "МАРТ",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 99308.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "waiting",
+                "date": "2026-06-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "27.03.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/9S58/RGbQNPPgS",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/9S58/RGbQNPPgS",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 62,
+        "app_no": "348",
+        "entity": "МКК",
+        "bill_no": "ОМ-12810",
+        "service": "Принц Плаза двери, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 198616.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 99308.0,
+                "comment": "МАРТ",
+                "date": "10.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 99308.0,
+                "comment": "АПРЕЛЬ",
+                "date": "10.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "10.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/LJ52/4ZkwFiaf3",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/LJ52/4ZkwFiaf3",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 63,
+        "app_no": "292",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12808",
+        "service": "Рынки Хабаровск, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 45872.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 22936.0,
+                "comment": "МАРТ",
+                "date": "08.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 22936.0,
+                "comment": "АПРЕЛЬ",
+                "date": "08.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "08.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/BhY6/ZZUJG57Bg",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/BhY6/ZZUJG57Bg",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 64,
+        "app_no": "347",
+        "entity": "МКК",
+        "bill_no": "ОМ-12807",
+        "service": "Рынки Хабаровск, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 241804.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 120902.0,
+                "comment": "МАРТ",
+                "date": "09.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 120902.0,
+                "comment": "АПРЕЛЬ",
+                "date": "09.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "09.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/WL85/Nu6ZDxaWk",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/WL85/Nu6ZDxaWk",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 65,
+        "app_no": "346",
+        "entity": "МКК",
+        "bill_no": "ОМ-12806",
+        "service": "Сенной рынок, Сенной ТЦ, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 206424.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 103212.0,
+                "comment": "МАРТ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 103212.0,
+                "comment": "АПРЕЛЬ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "07.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/K6vx/Mszy68zgB",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/K6vx/Mszy68zgB",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 66,
+        "app_no": "291",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12805",
+        "service": "Сенной ТЦ стойка, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 73932.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 36966.0,
+                "comment": "МАРТ",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 36966.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "waiting",
+                "date": "2026-04-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "27.03.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/pJdz/FGxrkYzJg",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/pJdz/FGxrkYzJg",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 67,
+        "app_no": "345",
+        "entity": "МКК",
+        "bill_no": "ОМ-12804",
+        "service": "Карнавал, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 19520.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 9760.0,
+                "comment": "МАРТ",
+                "date": "10.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 9760.0,
+                "comment": "АПРЕЛЬ",
+                "date": "10.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "10.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/miXa/46eG5x2Yg",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/miXa/46eG5x2Yg",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 68,
+        "app_no": "290",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12803",
+        "service": "Транспорт Мск, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 70516.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 35258.0,
+                "comment": "МАРТ",
+                "date": "2026-03-31",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 35258.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "waiting",
+                "date": "2026-04-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "07.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/6Zxs/nkopTmwVe",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/6Zxs/nkopTmwVe",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 69,
+        "app_no": "344",
+        "entity": "МКК",
+        "bill_no": "ОМ-12802",
+        "service": "Транспорт Мск, март-апр",
+        "period": "МАР, АПР",
+        "total_sum": 70516.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 35258.0,
+                "comment": "МАРТ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            },
+            {
+                "amount": 35258.0,
+                "comment": "АПРЕЛЬ",
+                "date": "07.04.2026",
+                "due_date": "",
+                "status": "paid"
+            }
+        ],
+        "status": "-",
+        "status_date": "07.04.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/5V8s/zywqXksa8",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/5V8s/zywqXksa8",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 70,
+        "app_no": "289",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12782",
+        "service": "Аэропорт Якутск, март-апрель",
+        "period": "МАР, АПР",
+        "total_sum": 198128.0,
+        "deadline": "",
+        "payments": [
+            {
+                "amount": 99064.0,
+                "comment": "МАРТ",
+                "due_date": "31.03.2026",
+                "status": "paid",
+                "date": "2026-03-31"
+            },
+            {
+                "amount": 99064.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "30.04.2026",
+                "status": "waiting",
+                "date": "2026-04-30"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "25.03.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "https://cloud.mail.ru/public/WXnN/wRRYPB6Ws",
+                "disabled": false
+            },
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/WXnN/wRRYPB6Ws",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 71,
+        "app_no": "297/1",
+        "entity": "РНКО",
+        "bill_no": "ОМ-12943",
+        "service": "Промо Москва",
+        "period": "МАР",
+        "total_sum": 19861.6,
+        "deadline": "",
+        "payments": [],
+        "status": "ОТПРАВЛЕНО",
+        "status_date": "20.03.2026"
+    },
+    {
+        "id": 72,
+        "app_no": "359",
+        "bill_no": "ОМ-13032",
+        "service": "Лифты Фудсити, апр-июнь",
+        "entity": "МКК",
+        "period": "АПР, МАЙ, ИЮН",
+        "status": "ПОДПИСАНО",
+        "total_sum": 1241960.0,
+        "payments": [
+            {
+                "amount": 34160.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "due_date": "15.05.2026",
+                "status": "paid",
+                "date": "2026-05-15"
+            },
+            {
+                "amount": 402600.0,
+                "comment": "АПРЕЛЬ",
+                "due_date": "15.05.2026",
+                "status": "paid",
+                "date": "2026-05-15"
+            },
+            {
+                "amount": 402600.0,
+                "comment": "МАЙ",
+                "due_date": "30.04.2026",
+                "status": "paid",
+                "date": "2026-04-30"
+            },
+            {
+                "amount": 402600.0,
+                "comment": "ИЮНЬ",
+                "due_date": "31.05.2026",
+                "status": "waiting",
+                "date": "2026-05-31"
+            }
+        ],
+        "photo_reports": {
+            "АПР": {
+                "url": "https://cloud.mail.ru/public/RUbr/BAQPhAw5P",
+                "disabled": false
+            },
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 73,
+        "app_no": "",
+        "bill_no": "ОМ-13204",
+        "service": "Лифты Котельники, июнь",
+        "entity": "МКК",
+        "period": "ИЮН",
+        "status": "-",
+        "total_sum": 18544.0,
+        "payments": []
+    },
+    {
+        "id": 74,
+        "app_no": "",
+        "bill_no": "ОМ-13203",
+        "service": "Рынки билайн, июнь-июль",
+        "entity": "РНКО",
+        "period": "ИЮН, ИЮЛ",
+        "status": "-",
+        "total_sum": 371490.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 75,
+        "app_no": "",
+        "bill_no": "ОМ-13207",
+        "service": "Транспорт билайн, июнь",
+        "entity": "-",
+        "period": "ИЮН",
+        "status": "-",
+        "total_sum": 931006.4,
+        "payments": [],
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 76,
+        "app_no": "",
+        "bill_no": "ОМ-13211",
+        "service": "Транспорт Якутск",
+        "entity": "ЮЛ",
+        "period": "ИЮН",
+        "status": "-",
+        "total_sum": 390400.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 77,
+        "app_no": "",
+        "bill_no": "ОМ-13214",
+        "service": "Автовокзалы Нск, июнь",
+        "entity": "ЮЛ",
+        "period": "ИЮН",
+        "status": "-",
+        "total_sum": 40321.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    }
+]
