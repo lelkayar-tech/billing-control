@@ -8,6 +8,8 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 
 app = FastAPI()
 
+CLIENT_PASSWORD = "lasisita"
+
 DB_FILE = "database.json"
 
 MONTHS_ORDER = ["ЯНВ", "ФЕВ", "МАР", "АПР", "МАЙ", "ИЮН", "ИЮЛ", "АВГ", "СЕН", "ОКТ", "НОЯ", "ДЕК"]
@@ -61,14 +63,135 @@ def get_sort_weight(period_str):
 
 
 @app.get("/", response_class=HTMLResponse)
-
-async def dashboard(request: Request, mode: str = Query(None)):
+async def dashboard(
+    request: Request,
+    mode: str = Query(None),
+    password: str = Query("")
+):
 
     db_data = load_db()
 
-    today = datetime.date.today()
+    if mode == "read":
+        
+        if password != CLIENT_PASSWORD:
 
-   
+          return """
+           <html>
+
+          <head>
+
+          <meta charset="UTF-8">
+ 
+          <script src="https://cdn.tailwindcss.com"></script>
+
+          </head>
+
+          <body class="bg-slate-100 flex items-center justify-center h-screen">
+
+          <form
+          method="get"
+          class="bg-white p-10 rounded-3xl shadow-lg w-[360px]"
+          >
+
+          <input
+          type="hidden"
+          name="mode"
+          value="read"
+          >
+
+            <div class="text-2xl font-black text-indigo-700 mb-2">
+
+            Billing Control
+
+            </div>
+
+            <div class="text-slate-500 text-sm mb-6">
+
+            Введите пароль
+
+            </div>
+
+            <input
+            name="password"
+            type="password"
+            placeholder="Пароль"
+            class="w-full border rounded-2xl p-4 mb-4"
+            >
+
+            <button
+            class="w-full bg-indigo-700 text-white rounded-2xl p-4 font-black"
+            >
+
+            Войти
+
+            </button>
+
+            </form>
+
+            </body>
+
+            </html>
+            """
+        return """
+        <html>
+
+        <head>
+
+        <meta charset="UTF-8">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        </head>
+
+        <body class="bg-slate-100 flex items-center justify-center h-screen">
+
+            <form
+            class="bg-white p-10 rounded-3xl shadow-lg w-[360px]"
+            method="get"
+            >
+
+                <input
+                type="hidden"
+                name="mode"
+                value="read"
+                >
+
+                <div class="text-2xl font-black text-indigo-700 mb-2">
+
+                    Billing Control
+
+                </div>
+
+                <div class="text-slate-500 text-sm mb-6">
+
+                    Введите пароль
+
+                </div>
+
+                <input
+                type="password"
+                name="password"
+                class="w-full border rounded-2xl p-4 mb-4"
+                placeholder="Пароль"
+                >
+
+                <button
+                class="w-full bg-indigo-700 text-white rounded-2xl p-4 font-black"
+                >
+
+                    Войти
+
+                </button>
+
+            </form>
+
+        </body>
+
+        </html>
+        """
+        today = datetime.date.today()
+
+    
 
     # СОРТИРОВКА: 1. Период (одиночные выше) 2. Номер приложения (APP)
 
