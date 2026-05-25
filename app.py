@@ -10,6 +10,8 @@ app = FastAPI()
 
 DB_FILE = "database.json"
 
+ADMIN_PASSWORD = "alexandre"
+
 MONTHS_ORDER = ["ЯНВ", "ФЕВ", "МАР", "АПР", "МАЙ", "ИЮН", "ИЮЛ", "АВГ", "СЕН", "ОКТ", "НОЯ", "ДЕК"]
 
 
@@ -62,7 +64,11 @@ def get_sort_weight(period_str):
 
 @app.get("/", response_class=HTMLResponse)
 
-async def dashboard(request: Request, mode: str = Query(None)):
+async def dashboard(
+    request: Request,
+    mode: str = Query(None),
+    password: str = Query("")
+):
 
     db_data = load_db()
 
@@ -83,6 +89,62 @@ async def dashboard(request: Request, mode: str = Query(None)):
    
 
     is_readonly = (mode == "read")
+
+    if not is_readonly and password != ADMIN_PASSWORD:
+
+        return """
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+
+    <body class="bg-slate-100 flex items-center justify-center h-screen">
+
+    <form
+    method="get"
+    class="bg-white p-10 rounded-3xl shadow-lg w-[360px]"
+    >
+
+    <div class="text-2xl font-black text-indigo-700 mb-3">
+
+    Billing Control
+
+    </div>
+
+    <div class="text-slate-500 text-sm mb-6">
+
+    Введите пароль редактора
+
+    </div>
+
+    <input
+    name="password"
+    type="password"
+    placeholder="Пароль"
+    class="w-full border rounded-2xl p-4 mb-4"
+    >
+
+    <button
+    class="w-full bg-indigo-700 text-white rounded-2xl p-4 font-black"
+    >
+
+    Войти
+
+    </button>
+
+    </form>
+
+    </body>
+
+    </html>
+    """
 
     all_entities = sorted(list(set(str(item.get('entity', '-')).strip() for item in db_data if item.get('entity'))))
 
@@ -134,8 +196,7 @@ return false;
 "
 class="text-[9px] text-slate-500 hover:underline"
 >
-Изменить / удалить
-</a>
+{"Изменить / удалить" if not is_readonly else ""}</a>
 
 </div>
         '''
@@ -154,17 +215,23 @@ form="edit-form-{idx}"
 if not item.get("photo_reports",{}).get(m,{}).get("disabled")
 else ""
 }
+        {
+        f'''
         <label class="flex items-center gap-2 text-[9px] text-slate-500">
-             <input
-                 type="checkbox"
-                  name="photo_disabled_{m}"
-                  {"checked" if item.get("photo_reports",{}).get(m,{}).get("disabled") else ""}
-                  form="edit-form-{idx}"
-             >
+            <input
+                type="checkbox"
+                name="photo_disabled_{m}"
+                {"checked" if item.get("photo_reports",{}).get(m,{}).get("disabled") else ""}
+                form="edit-form-{idx}"
+            >
 
-             ФО не нужен
+            ФО не нужен
 
         </label>
+        '''
+        if not is_readonly
+        else ""
+        }
        
     </div>
     """
@@ -210,7 +277,7 @@ else ""
 
                 pay_action_html = f'''
 
-                <form action="/toggle_pay/{idx}/{p_idx}" method="post" class="flex gap-1 items-center">
+                <form action="/toggle_pay/{idx}/{p_idx}?password={password} method="post" class="flex gap-1 items-center">
 
                     <select name="new_status" class="text-[9px] border rounded {'text-emerald-500 font-bold' if st=='paid' else ''}">
 
@@ -230,7 +297,7 @@ else ""
 
             <div class="flex justify-between items-center py-2 border-b border-slate-50 text-[10px]">
 
-                <form action="/edit_pay_detail/{idx}/{p_idx}" method="post" class="flex items-center gap-2 flex-1">
+                <form action="/edit_pay_detail/{idx}/{p_idx}?password={password} method="post" class="flex items-center gap-2 flex-1">
 
                     <input type="date" name="date" value="{p_date_str}" {"disabled" if is_readonly else ""} class="border rounded px-1 py-0.5 text-[9px] font-bold text-indigo-600 disabled:bg-transparent disabled:border-none">
 
@@ -246,7 +313,7 @@ else ""
 
                     {pay_action_html}
 
-                    {'' if is_readonly else f'<a href="/delete_payment/{idx}/{p_idx}" class="text-red-300 hover:text-red-500 ml-1">✕</a>'}
+                    {'' if is_readonly else f'<a href="/delete_payment/{idx}/{p_idx}?password={password}{idx}/{p_idx}" class="text-red-300 hover:text-red-500 ml-1">✕</a>'}
 
                 </div>
 
@@ -311,7 +378,7 @@ else ""
 
                 <td class="px-6 py-6 text-right font-mono text-sm font-black {'text-emerald-500' if debt<=0.1 else 'text-red-500'}">{format_curr(debt)}</td>
 
-                <td class="px-4 py-6 text-center">{f'<a href="/delete_item/{idx}" class="text-slate-200 hover:text-red-500">✕</a>' if not is_readonly else ""}</td>
+                <td class="px-4 py-6 text-center">{f'<a href="/delete_item/{idx}?password={password}" class="text-slate-200 hover:text-red-500">✕</a>' if not is_readonly else ""}</td>
 
             </tr>
 
@@ -321,7 +388,7 @@ else ""
 
                     <div class="grid grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-                        <form action="/update_item/{idx}" method="post" class="space-y-4" id="edit-form-{idx}">
+                       <form action="/update_item/{idx}?password={password}" method="post" class="space-y-4" id="edit-form-{idx}">
 
                             <p class="text-[10px] font-black text-indigo-600 uppercase italic">Настройки</p>
 
@@ -361,7 +428,7 @@ else ""
 
                             {'' if is_readonly else f'''
 
-                            <form action="/add_payment/{idx}" method="post" class="grid grid-cols-2 gap-2 mt-6 pt-6 border-t">
+                            <form action="/add_payment/{idx}?password={password} method="post" class="grid grid-cols-2 gap-2 mt-6 pt-6 border-t">
 
                                 <input name="comment" placeholder="Описание" class="col-span-2 p-3 border rounded-xl text-[10px]" required>
 
@@ -425,7 +492,7 @@ else ""
 
             <h1 class="text-4xl font-black text-[#1e1b4b] uppercase italic tracking-tighter">Billing <span class="text-indigo-600">Control</span></h1>
 
-            {f'<a href="/add_item" class="bg-[#1e1b4b] text-white px-8 py-4 rounded-2xl text-[11px] font-black uppercase shadow-xl">+ Новая запись</a>' if not is_readonly else ""}
+            {f'<a href="/add_item?password={password}" class="bg-[#1e1b4b] text-white px-8 py-4 rounded-2xl text-[11px] font-black uppercase shadow-xl">+ Новая запись</a>' if not is_readonly else ""}
 
         </div>
 
