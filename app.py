@@ -410,7 +410,6 @@ else ""
                             placeholder="Статус приложения"
                             class="w-full p-3 border rounded-2xl"
                             form="edit-form-{idx}"
-                            {"readonly" if is_readonly else ""}
                             >
 
                             <div class="grid grid-cols-6 gap-1 bg-white p-3 rounded-2xl border shadow-sm {"pointer-events-none opacity-80" if is_readonly else ""}">{month_checks}</div>
@@ -613,12 +612,17 @@ async def edit_pay_detail(item_id: int, p_idx: int, date: str = Form(...)):
 
 
 @app.post("/update_item/{item_id}")
-async def update_item(item_id: int, request: Request):
+async def update_item(
+    item_id: int,
+    request: Request,
+    password: str = Query("")
+):
     form = await request.form()
     db = load_db()
     for i in db:
         if i['id'] == item_id:
             i['service'], i['app_no'], i['bill_no'] = form.get('service'), form.get('app_no'), form.get('bill_no')
+            i['status'] = form.get('status', '')
             i['total_sum'] = float(str(form.get('total_sum', 0)).replace(',', '.'))
             i['period'] = ", ".join(form.getlist('months'))
             photo_reports = {}
@@ -630,7 +634,10 @@ async def update_item(item_id: int, request: Request):
                  }
             i['photo_reports'] = photo_reports
     save_db(db)
-    return RedirectResponse(url=f"/?#row-{item_id}", status_code=303)
+    return RedirectResponse(
+        url=f"/?password={password}#row-{item_id}",
+        status_code=303
+    )
 
 @app.post("/add_payment/{item_id}")
 async def add_payment(item_id: int, amount: float=Form(...), comment: str=Form(...), date: str=Form(...)):
