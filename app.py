@@ -337,8 +337,6 @@ else ""
 
                             </div>
 
-                            </div>
-
                             <input
                             name="status"
                             value="{item.get('status','')}"
