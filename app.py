@@ -416,6 +416,39 @@ form="edit-form-{idx}"
 
                             </div>
 
+                            <select
+                            name="status"
+                            class="w-full p-3 border rounded-2xl"
+                            form="edit-form-{idx}"
+                            >
+
+                            <option value="-"
+                            {"selected" if item.get("status","-")=="-" else ""}
+                            >
+                            —
+                            </option>
+
+                            <option value="ОТПРАВЛЕНО"
+                            {"selected" if item.get("status")=="ОТПРАВЛЕНО" else ""}
+                            >
+                            ОТПРАВЛЕНО
+                            </option>
+
+                            <option value="ПОДПИСАНО"
+                            {"selected" if item.get("status")=="ПОДПИСАНО" else ""}
+                            >
+                            ПОДПИСАНО
+                            </option>
+
+                            <option value="ОПЛАЧЕНО"
+                            {"selected" if item.get("status")=="ОПЛАЧЕНО" else ""}
+                            >
+                            ОПЛАЧЕНО
+                            </option>
+
+                            </select>
+
+
                             <div class="grid grid-cols-6 gap-1 bg-white p-3 rounded-2xl border shadow-sm {"pointer-events-none opacity-80" if is_readonly else ""}">{month_checks}</div>
 
                             <input name="total_sum" type="number" step="0.01" value="{total_sum}" {"readonly" if is_readonly else ""} class="w-full p-4 bg-white border rounded-2xl text-xs font-mono shadow-sm">
@@ -622,6 +655,7 @@ async def update_item(item_id: int, request: Request):
     for i in db:
         if i['id'] == item_id:
             i['service'], i['app_no'], i['bill_no'] = form.get('service'), form.get('app_no'), form.get('bill_no')
+            i['status'] = form.get('status','-')
             i['total_sum'] = float(str(form.get('total_sum', 0)).replace(',', '.'))
             i['period'] = ", ".join(form.getlist('months'))
             photo_reports = {}
