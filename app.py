@@ -8,8 +8,6 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 
 app = FastAPI()
 
-CLIENT_PASSWORD = "lasisita"
-
 DB_FILE = "database.json"
 
 MONTHS_ORDER = ["ЯНВ", "ФЕВ", "МАР", "АПР", "МАЙ", "ИЮН", "ИЮЛ", "АВГ", "СЕН", "ОКТ", "НОЯ", "ДЕК"]
@@ -63,80 +61,14 @@ def get_sort_weight(period_str):
 
 
 @app.get("/", response_class=HTMLResponse)
-async def dashboard(
-    request: Request,
-    mode: str = Query(None),
-    password: str = Query("")
-):
+
+async def dashboard(request: Request, mode: str = Query(None)):
 
     db_data = load_db()
 
-    if mode == "read":
-        
-        if password != CLIENT_PASSWORD:
-        
-          return """
-           <html>
+    today = datetime.date.today()
 
-          <head>
-
-          <meta charset="UTF-8">
- 
-          <script src="https://cdn.tailwindcss.com"></script>
-
-          </head>
-
-          <body class="bg-slate-100 flex items-center justify-center h-screen">
-
-          <form
-          method="get"
-          class="bg-white p-10 rounded-3xl shadow-lg w-[360px]"
-          >
-
-          <input
-          type="hidden"
-          name="mode"
-          value="read"
-          >
-
-            <div class="text-2xl font-black text-indigo-700 mb-2">
-
-            Billing Control
-
-            </div>
-
-            <div class="text-slate-500 text-sm mb-6">
-
-            Введите пароль
-
-            </div>
-
-            <input
-            name="password"
-            type="password"
-            placeholder="Пароль"
-            class="w-full border rounded-2xl p-4 mb-4"
-            >
-
-            <button
-            class="w-full bg-indigo-700 text-white rounded-2xl p-4 font-black"
-            >
-
-            Войти
-
-            </button>
-
-            </form>
-
-            </body>
-
-            </html>
-            """
-        
-        is_readonly = mode == "read" and password == CLIENT_PASSWORD
-        today = datetime.date.today()
-
-    
+   
 
     # СОРТИРОВКА: 1. Период (одиночные выше) 2. Номер приложения (APP)
 
@@ -170,28 +102,6 @@ async def dashboard(
         photo_rows = ""
         for m in MONTHS_ORDER:
            if m in period:
-              edit_link = ""
-
-              if not is_readonly:
-                  edit_link = f'''
-                      <a
-                      href="#"
-                      onclick="
-                      this.parentElement.innerHTML=
-                      `<input
-                      name='photo_url_{m}'
-                      value='{item.get("photo_reports",{}).get(m,{}).get("url","")}'
-                      placeholder='https://cloud.mail.ru/...'
-                      class='w-full p-2 border rounded-lg text-[9px]'
-                      form='edit-form-{idx}'
-                      >`;
-                      return false;
-                      "
-                      class="text-[9px] text-slate-500 hover:underline"
-                      >
-                      Изменить / удалить
-                      </a>
-                      '''
               photo_rows += f"""
     <div class="border rounded-xl p-3 space-y-2">
         <div class="text-[10px] font-black text-slate-700 uppercase">
@@ -209,7 +119,23 @@ class="text-[10px] text-indigo-500 font-black hover:underline"
 Открыть ссылку
 </a>
 
-{edit_link}
+<a
+href="#"
+onclick="
+this.parentElement.innerHTML=
+`<input
+name='photo_url_{m}'
+value='{item.get("photo_reports",{}).get(m,{}).get("url","")}'
+placeholder='https://cloud.mail.ru/...'
+class='w-full p-2 border rounded-lg text-[9px]'
+form='edit-form-{idx}'
+>`;
+return false;
+"
+class="text-[9px] text-slate-500 hover:underline"
+>
+Изменить / удалить
+</a>
 
 </div>
         '''
@@ -219,31 +145,26 @@ class="text-[10px] text-indigo-500 font-black hover:underline"
         f'''
 <input
 name="photo_url_{m}"
-value="{item.get('photo_reports',{}).get(m,{}).get('url','')}"
+value=""
 placeholder="https://cloud.mail.ru/..."
 class="w-full p-2 border rounded-lg text-[9px]"
 form="edit-form-{idx}"
 >
-
-
 '''
 if not item.get("photo_reports",{}).get(m,{}).get("disabled")
 else ""
 }
-        {'' if is_readonly else f'''
-<label class="flex items-center gap-2 text-[9px] text-slate-500">
+        <label class="flex items-center gap-2 text-[9px] text-slate-500">
+             <input
+                 type="checkbox"
+                  name="photo_disabled_{m}"
+                  {"checked" if item.get("photo_reports",{}).get(m,{}).get("disabled") else ""}
+                  form="edit-form-{idx}"
+             >
 
-<input
-type="checkbox"
-name="photo_disabled_{m}"
-{"checked" if item.get("photo_reports",{}).get(m,{}).get("disabled") else ""}
-form="edit-form-{idx}"
->
+             ФО не нужен
 
-ФО не нужен
-
-</label>
-'''}
+        </label>
        
     </div>
     """
@@ -416,38 +337,16 @@ form="edit-form-{idx}"
 
                             </div>
 
-                            <select
+                            </div>
+
+                            <input
                             name="status"
+                            value="{item.get('status','')}"
+                            placeholder="Статус приложения"
                             class="w-full p-3 border rounded-2xl"
                             form="edit-form-{idx}"
+                            {"readonly" if is_readonly else ""}
                             >
-
-                            <option value="-"
-                            {"selected" if item.get("status","-")=="-" else ""}
-                            >
-                            —
-                            </option>
-
-                            <option value="ОТПРАВЛЕНО"
-                            {"selected" if item.get("status")=="ОТПРАВЛЕНО" else ""}
-                            >
-                            ОТПРАВЛЕНО
-                            </option>
-
-                            <option value="ПОДПИСАНО"
-                            {"selected" if item.get("status")=="ПОДПИСАНО" else ""}
-                            >
-                            ПОДПИСАНО
-                            </option>
-
-                            <option value="ОПЛАЧЕНО"
-                            {"selected" if item.get("status")=="ОПЛАЧЕНО" else ""}
-                            >
-                            ОПЛАЧЕНО
-                            </option>
-
-                            </select>
-
 
                             <div class="grid grid-cols-6 gap-1 bg-white p-3 rounded-2xl border shadow-sm {"pointer-events-none opacity-80" if is_readonly else ""}">{month_checks}</div>
 
@@ -655,7 +554,6 @@ async def update_item(item_id: int, request: Request):
     for i in db:
         if i['id'] == item_id:
             i['service'], i['app_no'], i['bill_no'] = form.get('service'), form.get('app_no'), form.get('bill_no')
-            i['status'] = form.get('status','-')
             i['total_sum'] = float(str(form.get('total_sum', 0)).replace(',', '.'))
             i['period'] = ", ".join(form.getlist('months'))
             photo_reports = {}
