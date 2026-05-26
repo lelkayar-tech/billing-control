@@ -596,19 +596,26 @@ else ""
 
 
 @app.post("/edit_pay_detail/{item_id}/{p_idx}")
-
-async def edit_pay_detail(item_id: int, p_idx: int, date: str = Form(...)):
+async def edit_pay_detail(
+    item_id: int,
+    p_idx: int,
+    date: str = Form(...),
+    password: str = Query("")
+):
 
     db = load_db()
 
     for i in db:
 
-        if i['id'] == item_id: i['payments'][p_idx]['date'] = date
+        if i['id'] == item_id:
+            i['payments'][p_idx]['date'] = date
 
     save_db(db)
 
-    return RedirectResponse(url=f"/?#row-{item_id}", status_code=303)
-
+    return RedirectResponse(
+        url=f"/?password={password}#row-{item_id}",
+        status_code=303
+    )
 
 
 @app.post("/update_item/{item_id}")
@@ -640,45 +647,78 @@ async def update_item(
     )
 
 @app.post("/add_payment/{item_id}")
-async def add_payment(item_id: int, amount: float=Form(...), comment: str=Form(...), date: str=Form(...)):
+async def add_payment(
+    item_id: int,
+    amount: float=Form(...),
+    comment: str=Form(...),
+    date: str=Form(...),
+    password: str=Query("")
+):
     db = load_db()
     for i in db:
         if i['id'] == item_id:
             if 'payments' not in i: i['payments'] = []
             i['payments'].append({"amount": amount, "comment": comment, "date": date, "status": "waiting"})
     save_db(db)
-    return RedirectResponse(url=f"/?#row-{item_id}", status_code=303)
+    return RedirectResponse(
+    url=f"/?password={password}#row-{item_id}",
+    status_code=303
+)
 
 
 @app.post("/toggle_pay/{item_id}/{p_idx}")
-async def toggle_pay(item_id: int, p_idx: int, new_status: str=Form(...)):
+async def toggle_pay(
+    item_id: int,
+    p_idx: int,
+    password: str = Query(""),
+    new_status: str = Form(...)
+):
     db = load_db()
-    for i in db:
-        if i['id'] == item_id: i['payments'][p_idx]['status'] = new_status
-    save_db(db)
-    return RedirectResponse(url=f"/?#row-{item_id}", status_code=303)
 
+    for i in db:
+        if i['id'] == item_id:
+            i['payments'][p_idx]['status'] = new_status
+
+    save_db(db)
+
+    return RedirectResponse(
+        url=f"/?password={password}#row-{item_id}",
+        status_code=303
+    )
 @app.get("/delete_payment/{item_id}/{p_idx}")
-async def delete_payment(item_id: int, p_idx: int):
+async def delete_payment(
+    item_id: int,
+    p_idx: int,
+    password: str=Query("")
+):
     db = load_db()
     for i in db:
         if i['id'] == item_id: i['payments'].pop(p_idx)
     save_db(db)
-    return RedirectResponse(url=f"/?#row-{item_id}")
+    return RedirectResponse(
+    url=f"/?password={password}#row-{item_id}"
+)
 
 @app.get("/add_item")
-async def add_item():
+async def add_item(password: str=Query("")):
     db = load_db()
     new_id = max([i['id'] for i in db] + [0]) + 1
     db.append({"id": new_id, "app_no": "Приложение", "bill_no": "Счет", "service": "Новая запись", "entity": "ЮЛ", "period": "", "status": "-", "total_sum": 0, "payments": []})
     save_db(db)
-    return RedirectResponse(url="/")
+    return RedirectResponse(
+    url=f"/?password={password}"
+)
 
 @app.get("/delete_item/{item_id}")
-async def delete_item(item_id: int):
+async def delete_item(
+    item_id: int,
+    password: str=Query("")
+):
     db = load_db()
     save_db([i for i in db if i['id'] != item_id])
-    return RedirectResponse(url="/")
+    return RedirectResponse(
+    url=f"/?password={password}"
+)
 
 
 if __name__ == "__main__":
