@@ -42,21 +42,29 @@ def format_curr(value):
 
 def get_sort_weight(period_str):
 
-    if not period_str: return (-1, 0)
+    if not period_str:
+        return (-1, 0)
 
-    months = [m for m in MONTHS_ORDER if m in str(period_str).upper()]
+    months = [
+        m
+        for m in MONTHS_ORDER
+        if m in str(period_str).upper()
+    ]
 
-    if not months: return (-1, 0)
+    if not months:
+        return (-1, 0)
 
-    # Первый элемент кортежа — индекс последнего месяца (для хронологии)
+    last_month_idx = max(
+        MONTHS_ORDER.index(m)
+        for m in months
+    )
 
-    # Второй элемент — инвертированное кол-во месяцев (чем меньше месяцев, тем выше вес)
+    month_count = len(months)
 
-    last_month_idx = max([MONTHS_ORDER.index(m) for m in months])
-
-    count_weight = 100 - len(months)
-
-    return (last_month_idx, count_weight)
+    return (
+        last_month_idx,
+        -month_count
+    )
 
 
 
