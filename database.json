@@ -5,12 +5,18 @@
         "entity": "РНКО",
         "bill_no": "ОМ-13188",
         "service": "Медиафасады Пушкино Парк, Купавна, июнь",
-        "period": "ИЮНЬ",
+        "period": "ИЮН",
         "total_sum": 244000.0,
         "deadline": "",
         "payments": [],
-        "status": "",
-        "status_date": ""
+        "status": "-",
+        "status_date": "",
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 2,
@@ -18,12 +24,18 @@
         "entity": "РНКО",
         "bill_no": "ОМ-13183",
         "service": "ООН: Красина, июнь",
-        "period": "ИЮНЬ",
+        "period": "ИЮН",
         "total_sum": 66734.0,
         "deadline": "",
         "payments": [],
-        "status": "",
-        "status_date": ""
+        "status": "-",
+        "status_date": "",
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 3,
@@ -126,7 +138,13 @@
         "total_sum": 39966.0,
         "deadline": "",
         "payments": [],
-        "status": "-"
+        "status": "-",
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 12,
@@ -281,12 +299,19 @@
         "period": "МАЙ",
         "total_sum": 66734.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 6734.0,
+                "comment": "МАЙ",
+                "date": "2026-05-31",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "08.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/UH1U/rudruN9mD",
+                "url": "",
                 "disabled": false
             }
         }
@@ -395,12 +420,19 @@
         "period": "МАЙ",
         "total_sum": 22936.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 22936.0,
+                "comment": "МАЙ",
+                "date": "2026-05-31",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/49yU/DbFhKCSei",
+                "url": "",
                 "disabled": false
             }
         }
@@ -433,12 +465,19 @@
         "period": "МАЙ",
         "total_sum": 35258.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 35258.0,
+                "comment": "МАЙ",
+                "date": "2026-05-31",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/tPGB/m3VyLQ4BF",
+                "url": "",
                 "disabled": false
             }
         }
@@ -548,11 +587,11 @@
         "total_sum": 934825.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/7ngs/RVxVcJAc4",
+                "url": "",
                 "disabled": false
             }
         }
@@ -1451,7 +1490,7 @@
                 "amount": 39894.0,
                 "comment": "АПРЕЛЬ",
                 "due_date": "30.04.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-04-30"
             }
         ],
@@ -1496,7 +1535,7 @@
                 "amount": 66734.0,
                 "comment": "АПРЕЛЬ",
                 "due_date": "30.04.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-04-30"
             }
         ],
@@ -1572,7 +1611,7 @@
                 "amount": 99308.0,
                 "comment": "АПРЕЛЬ",
                 "due_date": "30.04.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -1580,11 +1619,11 @@
         "status_date": "27.03.2026",
         "photo_reports": {
             "МАР": {
-                "url": "https://cloud.mail.ru/public/9S58/RGbQNPPgS",
+                "url": "",
                 "disabled": false
             },
             "АПР": {
-                "url": "https://cloud.mail.ru/public/9S58/RGbQNPPgS",
+                "url": "",
                 "disabled": false
             }
         }
@@ -1762,7 +1801,7 @@
                 "amount": 36966.0,
                 "comment": "АПРЕЛЬ",
                 "due_date": "30.04.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-04-30"
             }
         ],
@@ -1838,7 +1877,7 @@
                 "amount": 35258.0,
                 "comment": "АПРЕЛЬ",
                 "due_date": "30.04.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-04-30"
             }
         ],
@@ -1914,7 +1953,7 @@
                 "amount": 99064.0,
                 "comment": "АПРЕЛЬ",
                 "due_date": "30.04.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-04-30"
             }
         ],
@@ -1941,8 +1980,14 @@
         "total_sum": 19861.6,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
-        "status_date": "20.03.2026"
+        "status": "ПОДПИСАНО",
+        "status_date": "20.03.2026",
+        "photo_reports": {
+            "МАР": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 72,
@@ -2015,16 +2060,12 @@
         "bill_no": "ОМ-13203",
         "service": "Рынки билайн, июнь-июль",
         "entity": "РНКО",
-        "period": "ИЮН, ИЮЛ",
+        "period": "ИЮН",
         "status": "-",
         "total_sum": 371490.0,
         "payments": [],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
-                "disabled": false
-            },
-            "ИЮЛ": {
                 "url": "",
                 "disabled": false
             }
@@ -2073,6 +2114,23 @@
         "period": "ИЮН",
         "status": "-",
         "total_sum": 40321.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 78,
+        "app_no": "0",
+        "bill_no": "ОМ-13228",
+        "service": "Якутия, сайты, июнь",
+        "entity": "ЮЛ",
+        "period": "ИЮН",
+        "status": "-",
+        "total_sum": 56120.0,
         "payments": [],
         "photo_reports": {
             "ИЮН": {
