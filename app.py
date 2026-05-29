@@ -568,6 +568,7 @@ async def update_item(
     request: Request,
 ):
     form = await request.form()
+    print("ENTITY =", form.get('entity'))
     db = load_db()
     for i in db:
         if i['id'] == item_id:
