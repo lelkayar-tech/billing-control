@@ -571,17 +571,21 @@ async def update_item(
     db = load_db()
     for i in db:
         if i['id'] == item_id:
-            i['service'], i['app_no'], i['bill_no'] = form.get('service'), form.get('app_no'), form.get('bill_no')
+            i['service'] = form.get('service')
+            i['entity'] = form.get('entity')
+            i['app_no'] = form.get('app_no')
+            i['bill_no'] = form.get('bill_no')
             i['status'] = form.get('status', '')
             i['total_sum'] = float(str(form.get('total_sum', 0)).replace(',', '.'))
             i['period'] = ", ".join(form.getlist('months'))
             photo_reports = {}
+
             for m in MONTHS_ORDER:
-             if m in form.getlist('months'):
-                 photo_reports[m] = {
-                     "url": form.get(f'photo_url_{m}',''),
-                      "disabled": f'photo_disabled_{m}' in form
-                 }
+                if m in form.getlist('months'):
+                            photo_reports[m] = {
+                                "url": form.get(f'photo_url_{m}',''),
+                                "disabled": f'photo_disabled_{m}' in form
+                            }
             i['photo_reports'] = photo_reports
     save_db(db)
     return RedirectResponse(
