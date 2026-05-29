@@ -65,14 +65,20 @@
     {
         "id": 5,
         "app_no": "-",
-        "entity": "МКК",
-        "bill_no": "ОМ-13179",
+        "entity": "РНКО",
+        "bill_no": "ОМ-13180",
         "service": "Принц Плаза двери, июнь",
         "period": "ИЮН",
         "total_sum": 99308.0,
         "deadline": "",
         "payments": [],
-        "status": "-"
+        "status": "-",
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 6,
@@ -258,11 +264,21 @@
         "entity": "БЦ",
         "bill_no": "ОМ-13113",
         "service": "Якутия, радио",
-        "period": "МАЙ",
-        "total_sum": 138592.0,
+        "period": "МАЙ, ИЮН",
+        "total_sum": 269254.0,
         "deadline": "",
         "payments": [],
-        "status": "-"
+        "status": "-",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            },
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 21,
@@ -275,7 +291,13 @@
         "deadline": "",
         "payments": [],
         "status": "ОТПРАВЛЕНО",
-        "status_date": "08.05.2026"
+        "status_date": "08.05.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 22,
@@ -364,11 +386,11 @@
         "total_sum": 99064.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/zfpE/AZUYPKRuh",
+                "url": "",
                 "disabled": false
             }
         }
@@ -383,11 +405,11 @@
         "total_sum": 99308.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/LAvU/omLCex7WS",
+                "url": "",
                 "disabled": false
             }
         }
@@ -395,18 +417,18 @@
     {
         "id": 28,
         "app_no": "367",
-        "entity": "РНКО",
+        "entity": "МКК",
         "bill_no": "ОМ-13067",
         "service": "Принц Плаза двери, май",
         "period": "МАЙ",
         "total_sum": 99308.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/Qm4f/QhaUnCxZB",
+                "url": "",
                 "disabled": false
             }
         }
@@ -447,11 +469,11 @@
         "total_sum": 120902.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/cSPQ/3S9CFnaVC",
+                "url": "",
                 "disabled": false
             }
         }
@@ -511,11 +533,11 @@
         "total_sum": 39966.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/a277/TEDbCmimb",
+                "url": "",
                 "disabled": false
             }
         }
@@ -530,11 +552,11 @@
         "total_sum": 103212.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/s1FR/hUSF2HpmL",
+                "url": "",
                 "disabled": false
             }
         }
@@ -549,11 +571,11 @@
         "total_sum": 9760.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/xxvd/17KmaqnGo",
+                "url": "",
                 "disabled": false
             }
         }
@@ -568,11 +590,11 @@
         "total_sum": 64965.0,
         "deadline": "",
         "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/6FVm/Avfd3i13b",
+                "url": "",
                 "disabled": false
             }
         }
@@ -2076,7 +2098,7 @@
         "app_no": "",
         "bill_no": "ОМ-13207",
         "service": "Транспорт билайн, июнь",
-        "entity": "-",
+        "entity": "РНКО",
         "period": "ИЮН",
         "status": "-",
         "total_sum": 931006.4,
@@ -2093,7 +2115,7 @@
         "app_no": "",
         "bill_no": "ОМ-13211",
         "service": "Транспорт Якутск",
-        "entity": "ЮЛ",
+        "entity": "БЦ",
         "period": "ИЮН",
         "status": "-",
         "total_sum": 390400.0,
@@ -2110,7 +2132,7 @@
         "app_no": "",
         "bill_no": "ОМ-13214",
         "service": "Автовокзалы Нск, июнь",
-        "entity": "ЮЛ",
+        "entity": "РНКО",
         "period": "ИЮН",
         "status": "-",
         "total_sum": 40321.0,
@@ -2124,16 +2146,67 @@
     },
     {
         "id": 78,
-        "app_no": "0",
+        "app_no": "",
         "bill_no": "ОМ-13228",
         "service": "Якутия, сайты, июнь",
-        "entity": "ЮЛ",
+        "entity": "БЦ",
         "period": "ИЮН",
         "status": "-",
         "total_sum": 56120.0,
         "payments": [],
         "photo_reports": {
             "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 79,
+        "app_no": "-",
+        "bill_no": "ОМ-13235",
+        "service": "Шары Москва",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 14137.97,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 80,
+        "app_no": "ДС1 к 360",
+        "bill_no": "ОМ-13239",
+        "service": "Фудсити атриум перемонтаж",
+        "entity": "МКК",
+        "period": "МАЙ",
+        "status": "-",
+        "total_sum": 56730.0,
+        "payments": [],
+        "photo_reports": {
+            "МАЙ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 81,
+        "app_no": "ДС1 к 301",
+        "bill_no": "ОМ-13241",
+        "service": "Фудсити атриум перемонтаж",
+        "entity": "РНКО",
+        "period": "МАЙ",
+        "status": "-",
+        "total_sum": 56730.0,
+        "payments": [],
+        "photo_reports": {
+            "МАЙ": {
                 "url": "",
                 "disabled": false
             }
