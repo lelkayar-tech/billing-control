@@ -326,7 +326,7 @@
                 "amount": 6734.0,
                 "comment": "МАЙ",
                 "date": "2026-05-31",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -447,7 +447,7 @@
                 "amount": 22936.0,
                 "comment": "МАЙ",
                 "date": "2026-05-31",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -492,7 +492,7 @@
                 "amount": 35258.0,
                 "comment": "МАЙ",
                 "date": "2026-05-31",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -640,7 +640,7 @@
                 "amount": 165310.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             },
             {
@@ -689,7 +689,7 @@
                 "amount": 162687.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             },
             {
@@ -871,7 +871,7 @@
                 "amount": 41480.0,
                 "comment": "МАЙ",
                 "due_date": "20.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-20"
             },
             {
@@ -970,7 +970,7 @@
                 "comment": "МАЙ",
                 "date": "2026-05-31",
                 "due_date": "",
-                "status": "waiting"
+                "status": "paid"
             },
             {
                 "amount": 66002.0,
@@ -1018,7 +1018,7 @@
                 "amount": 66002.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             },
             {
@@ -1067,7 +1067,7 @@
                 "amount": 165005.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             },
             {
@@ -1116,15 +1116,14 @@
                 "amount": 157502.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             },
             {
                 "amount": 157502.0,
                 "comment": "ИЮНЬ",
-                "due_date": "30.06.2026",
-                "status": "waiting",
-                "date": "2026-05-30"
+                "date": "2026-06-30",
+                "status": "waiting"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -1277,7 +1276,7 @@
                 "amount": 40321.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             }
         ],
@@ -1463,7 +1462,7 @@
                 "amount": 244000.0,
                 "comment": "МАЙ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             }
         ],
