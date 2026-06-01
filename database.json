@@ -347,12 +347,19 @@
         "period": "МАЙ",
         "total_sum": 303048.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 303048.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-05",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/W1hY/AFSR34aLo",
+                "url": "",
                 "disabled": false
             }
         }
@@ -366,12 +373,19 @@
         "period": "МАЙ",
         "total_sum": 39894.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 39894.0,
+                "comment": "МАЙ",
+                "date": "2026-06-05",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/Xgt5/BCrezvEWG",
+                "url": "",
                 "disabled": false
             }
         }
@@ -385,7 +399,14 @@
         "period": "МАЙ",
         "total_sum": 99064.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 99064.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
@@ -404,7 +425,14 @@
         "period": "МАЙ",
         "total_sum": 99308.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 99308.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
@@ -423,7 +451,14 @@
         "period": "МАЙ",
         "total_sum": 99308.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 99308.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
@@ -468,7 +503,14 @@
         "period": "МАЙ",
         "total_sum": 120902.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 120902.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
@@ -532,7 +574,14 @@
         "period": "МАЙ",
         "total_sum": 39966.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 39966.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "05.05.2026",
         "photo_reports": {
@@ -551,7 +600,14 @@
         "period": "МАЙ",
         "total_sum": 103212.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 103212.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
@@ -570,7 +626,14 @@
         "period": "МАЙ",
         "total_sum": 9760.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 9760.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
@@ -589,7 +652,14 @@
         "period": "МАЙ",
         "total_sum": 64965.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 64965.0,
+                "comment": "МАЙ",
+                "date": "2026-06-03",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
@@ -608,7 +678,14 @@
         "period": "МАЙ",
         "total_sum": 934825.0,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 934825.0,
+                "comment": "МАЙ",
+                "date": "2026-05-31",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
@@ -2000,7 +2077,14 @@
         "period": "МАР",
         "total_sum": 19861.6,
         "deadline": "",
-        "payments": [],
+        "payments": [
+            {
+                "amount": 19861.6,
+                "comment": "МАРТ",
+                "date": "2026-05-27",
+                "status": "waiting"
+            }
+        ],
         "status": "ПОДПИСАНО",
         "status_date": "20.03.2026",
         "photo_reports": {
