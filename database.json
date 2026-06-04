@@ -69,7 +69,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/CJYT/uNSi4JrBV",
                 "disabled": false
             }
         }
@@ -87,7 +87,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/BZuJ/mZmBvS6Mt",
                 "disabled": false
             }
         }
@@ -342,9 +342,22 @@
         "period": "МАЙ",
         "total_sum": 42334.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
-        "status_date": "27.04.2026"
+        "payments": [
+            {
+                "amount": 42334.0,
+                "comment": "МАЙ",
+                "date": "2026-06-10",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
+        "status_date": "27.04.2026",
+        "photo_reports": {
+            "МАЙ": {
+                "url": "",
+                "disabled": true
+            }
+        }
     },
     {
         "id": 23,
@@ -589,12 +602,19 @@
         "period": "МАЙ",
         "total_sum": 35258.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 35258.0,
+                "comment": "МАЙ",
+                "date": "2026-06-10",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "https://cloud.mail.ru/public/3DR8/eNKBP9SfG",
+                "url": "",
                 "disabled": false
             }
         }
