@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "app_no": "",
+        "app_no": "317",
         "entity": "РНКО",
         "bill_no": "ОМ-13188",
         "service": "Медиафасады Пушкино Парк, Купавна, июнь",
@@ -9,11 +9,11 @@
         "total_sum": 244000.0,
         "deadline": "",
         "payments": [],
-        "status": "-",
+        "status": "ОТПРАВЛЕНО",
         "status_date": "",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/GjgS/2Z64b7WaW",
+                "url": "",
                 "disabled": false
             }
         }
@@ -32,7 +32,7 @@
         "status_date": "",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/cX9q/ubyhJrQfh",
                 "disabled": false
             }
         }
@@ -235,7 +235,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/5UH3/QZecNgSec",
                 "disabled": false
             }
         }
@@ -399,7 +399,7 @@
                 "amount": 303048.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-05",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -503,7 +503,7 @@
                 "amount": 99308.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -555,7 +555,7 @@
                 "amount": 120902.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -614,7 +614,7 @@
         "status_date": "27.04.2026",
         "photo_reports": {
             "МАЙ": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/3DR8/eNKBP9SfG",
                 "disabled": false
             }
         }
@@ -659,7 +659,7 @@
                 "amount": 103212.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -685,7 +685,7 @@
                 "amount": 9760.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -711,7 +711,7 @@
                 "amount": 64965.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -1107,7 +1107,7 @@
                 "amount": 66002.0,
                 "comment": "ИЮНЬ",
                 "due_date": "30.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -2221,34 +2221,34 @@
     },
     {
         "id": 74,
-        "app_no": "",
+        "app_no": "319",
         "bill_no": "ОМ-13203",
-        "service": "Рынки билайн, июнь-июль",
+        "service": "Рынки билайн, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "-",
+        "status": "ОТПРАВЛЕНО",
         "total_sum": 371490.0,
         "payments": [],
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/rcva/7KHMqt1qR",
+                "url": "",
                 "disabled": false
             }
         }
     },
     {
         "id": 75,
-        "app_no": "",
+        "app_no": "320",
         "bill_no": "ОМ-13207",
         "service": "Транспорт билайн, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "-",
+        "status": "ОТПРАВЛЕНО",
         "total_sum": 931006.4,
         "payments": [],
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/vVa8/p9oofp1Lm",
+                "url": "",
                 "disabled": false
             }
         }
@@ -2272,12 +2272,12 @@
     },
     {
         "id": 77,
-        "app_no": "",
+        "app_no": "318",
         "bill_no": "ОМ-13214",
         "service": "Автовокзалы Нск, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "-",
+        "status": "ОТПРАВЛЕНО",
         "total_sum": 40321.0,
         "payments": [],
         "photo_reports": {
