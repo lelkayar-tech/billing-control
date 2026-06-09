@@ -51,7 +51,7 @@
         "status_date": "",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/4y3Y/dmiStyoUn",
                 "disabled": false
             }
         }
@@ -141,7 +141,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/Qbca/nynXSj3u2",
                 "disabled": false
             }
         }
@@ -159,7 +159,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/tfME/98YPq483w",
                 "disabled": false
             }
         }
@@ -268,7 +268,13 @@
         "total_sum": 156160.0,
         "deadline": "",
         "payments": [],
-        "status": "-"
+        "status": "-",
+        "photo_reports": {
+            "ИЮН": {
+                "url": "https://cloud.mail.ru/public/1R8E/yb1vmAcPK",
+                "disabled": false
+            }
+        }
     },
     {
         "id": 19,
@@ -294,7 +300,7 @@
     },
     {
         "id": 20,
-        "app_no": "",
+        "app_no": "66",
         "entity": "БЦ",
         "bill_no": "ОМ-13113",
         "service": "Якутия, радио",
@@ -302,7 +308,7 @@
         "total_sum": 269254.0,
         "deadline": "",
         "payments": [],
-        "status": "-",
+        "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "МАЙ": {
                 "url": "",
