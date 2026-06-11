@@ -213,7 +213,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/TgPS/jjMAyoQJi",
                 "disabled": false
             },
             "ИЮЛ": {
@@ -483,7 +483,7 @@
                 "amount": 99308.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -613,7 +613,7 @@
                 "amount": 35258.0,
                 "comment": "МАЙ",
                 "date": "2026-06-10",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -2407,6 +2407,686 @@
         "payments": [],
         "photo_reports": {
             "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 85,
+        "app_no": "369",
+        "bill_no": "ОМ-13085",
+        "service": "Садовод, путеводитель",
+        "entity": "МКК",
+        "period": "ИЮН",
+        "status": "ПОДПИСАНО",
+        "total_sum": 0.0,
+        "payments": [
+            {
+                "amount": 42334.0,
+                "comment": "МАЙ",
+                "date": "2026-06-10",
+                "status": "paid"
+            }
+        ],
+        "photo_reports": {
+            "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 86,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13293",
+        "service": "Фудсити фасад 10 вход, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 495930.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 87,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13292",
+        "service": "Входные группы Фудсити, ДП: 3, 10, 13, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 488061.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 88,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13291",
+        "service": "Фудсити атриум, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 301950.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 89,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13290",
+        "service": "Фудсити атриум, июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 301950.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 90,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13289",
+        "service": "Лифты Фудсити, июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 1207800.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 91,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13288",
+        "service": "Фасад Фудсити (2 места), июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 971730.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 92,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13287",
+        "service": "Хостел Фудсити холл, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 124440.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 93,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13286",
+        "service": "Хостел Фудсити лифт, июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 186660.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 94,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13285",
+        "service": "ТЯК Москва, пилларсы, июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 198006.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 95,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13284",
+        "service": "ТЯК Москва, пилларсы, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 198006.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 96,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13283",
+        "service": "ТЯК Москва экраны, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 495015.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 97,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13282",
+        "service": "Садовод, фасадные баннеры, июль-сент",
+        "entity": "РНКО",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 472506.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 98,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13281",
+        "service": "Садовод (2 места), плакаты Юнона, июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 316956.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 99,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13280",
+        "service": "Входные группы Фудсити, МКК: 2, 5, 11, 12, 16, июль-сент",
+        "entity": "МКК",
+        "period": "ИЮЛ, АВГ, СЕН",
+        "status": "-",
+        "total_sum": 813435.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            },
+            "АВГ": {
+                "url": "",
+                "disabled": false
+            },
+            "СЕН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 100,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13294",
+        "service": "Лифты Подмосковье, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 1494378.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 101,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13279",
+        "service": "Автовокзалы Нск, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 40321.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 102,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13278",
+        "service": "Лифты Котельники, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 18544.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 103,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13277",
+        "service": "Медиафасады Пушкино Парк, Купавна, июль",
+        "entity": "ЮЛ",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 244000.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 104,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13276",
+        "service": "ООН: Красина, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 66734.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 105,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13275",
+        "service": "Рынок Самара, новое место, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 39894.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 106,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13274",
+        "service": "Принц Плаза двери, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 99308.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 107,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13273",
+        "service": "Принц Плаза двери, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 99308.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 108,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13272",
+        "service": "Рынки Хабаровск, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 22936.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 109,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13271",
+        "service": "Рынки Хабаровск, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 133590.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 110,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13270",
+        "service": "Транспорт Мск, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 35258.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 111,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13269",
+        "service": "Транспорт Мск, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 35258.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 112,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13268",
+        "service": "Сенной ТЦ стойка, июль",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 36966.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 113,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13267",
+        "service": "Сенной рынок, Сенной ТЦ, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 103212.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 114,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13266",
+        "service": "Карнавал, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 9760.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 115,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13265",
+        "service": "Рынки Томск, Кемерово, Владикавказ, Самара, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 64965.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 116,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13264",
+        "service": "ООН: Доватора, ГБШ, Хилок, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 303048.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 117,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13240",
+        "service": "Диджитал, июль",
+        "entity": "МКК",
+        "period": "ИЮЛ",
+        "status": "-",
+        "total_sum": 934825.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
                 "url": "",
                 "disabled": false
             }
