@@ -105,7 +105,7 @@
         "status": "ОТПРАВЛЕНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/V6c3/xmtp7jP94",
                 "disabled": false
             }
         }
@@ -2142,7 +2142,7 @@
                 "amount": 19861.6,
                 "comment": "МАРТ",
                 "date": "2026-05-27",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -2390,7 +2390,7 @@
         "payments": [],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/nd3w/f9G4M9FsG",
                 "disabled": false
             }
         }
@@ -3087,6 +3087,23 @@
         "payments": [],
         "photo_reports": {
             "ИЮЛ": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 118,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13301",
+        "service": "Пицца 19 июня",
+        "entity": "БЦ",
+        "period": "ИЮН",
+        "status": "-",
+        "total_sum": 56709.26,
+        "payments": [],
+        "photo_reports": {
+            "ИЮН": {
                 "url": "",
                 "disabled": false
             }
