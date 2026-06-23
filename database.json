@@ -83,8 +83,15 @@
         "period": "ИЮН",
         "total_sum": 99308.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 99308.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
                 "url": "https://cloud.mail.ru/public/BZuJ/mZmBvS6Mt",
@@ -101,11 +108,18 @@
         "period": "ИЮН",
         "total_sum": 120902.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 120902.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/V6c3/xmtp7jP94",
+                "url": "",
                 "disabled": false
             }
         }
@@ -119,11 +133,18 @@
         "period": "ИЮН",
         "total_sum": 35258.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 35258.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/di5N/BbvqqU6iC",
                 "disabled": false
             }
         }
@@ -155,11 +176,18 @@
         "period": "ИЮН",
         "total_sum": 103212.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 103212.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/tfME/98YPq483w",
+                "url": "",
                 "disabled": false
             }
         }
@@ -173,8 +201,15 @@
         "period": "ИЮН",
         "total_sum": 9760.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 9760.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
                 "url": "",
@@ -191,8 +226,15 @@
         "period": "ИЮН",
         "total_sum": 64965.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 64965.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
                 "url": "",
@@ -209,11 +251,24 @@
         "period": "ИЮН, ИЮЛ",
         "total_sum": 727974.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 363987.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            },
+            {
+                "amount": 363987.0,
+                "comment": "ИЮЛЬ",
+                "date": "2026-07-31",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/TgPS/jjMAyoQJi",
+                "url": "",
                 "disabled": false
             },
             "ИЮЛ": {
@@ -231,11 +286,18 @@
         "period": "ИЮН",
         "total_sum": 303048.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 303048.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/5UH3/QZecNgSec",
+                "url": "",
                 "disabled": false
             }
         }
@@ -249,11 +311,18 @@
         "period": "ИЮН",
         "total_sum": 934825.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 934825.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/qbye/5v5Y29K2Z",
                 "disabled": false
             }
         }
@@ -353,7 +422,7 @@
                 "amount": 42334.0,
                 "comment": "МАЙ",
                 "date": "2026-06-10",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -457,7 +526,7 @@
                 "amount": 99064.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -639,7 +708,7 @@
                 "amount": 39966.0,
                 "comment": "МАЙ",
                 "date": "2026-06-03",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -2215,12 +2284,19 @@
         "service": "Лифты Котельники, июнь",
         "entity": "МКК",
         "period": "ИЮН",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 18544.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 18544.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/9VpR/MVLC7bxtB",
+                "url": "",
                 "disabled": false
             }
         }
