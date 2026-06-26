@@ -329,18 +329,25 @@
     },
     {
         "id": 18,
-        "app_no": "",
+        "app_no": "69",
         "entity": "БЦ",
         "bill_no": "ОМ-13123",
         "service": "Лифты Якутск",
         "period": "ИЮН",
         "total_sum": 156160.0,
         "deadline": "",
-        "payments": [],
-        "status": "-",
+        "payments": [
+            {
+                "amount": 156160.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/1R8E/yb1vmAcPK",
+                "url": "",
                 "disabled": false
             }
         }
@@ -376,16 +383,35 @@
         "period": "МАЙ, ИЮН",
         "total_sum": 269254.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 16470.0,
+                "comment": "Изготовление",
+                "date": "2026-06-25",
+                "status": "waiting"
+            },
+            {
+                "amount": 126392.0,
+                "comment": "МАЙ",
+                "date": "2026-06-25",
+                "status": "waiting"
+            },
+            {
+                "amount": 126392.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-25",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "МАЙ": {
                 "url": "",
-                "disabled": false
+                "disabled": true
             },
             "ИЮН": {
                 "url": "",
-                "disabled": false
+                "disabled": true
             }
         }
     },
@@ -398,13 +424,20 @@
         "period": "МАЙ",
         "total_sum": 83204.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 83204.0,
+                "comment": "МАЙ",
+                "date": "2026-06-26",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "08.05.2026",
         "photo_reports": {
             "МАЙ": {
                 "url": "",
-                "disabled": false
+                "disabled": true
             }
         }
     },
@@ -500,7 +533,7 @@
                 "amount": 39894.0,
                 "comment": "МАЙ",
                 "date": "2026-06-05",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -853,7 +886,7 @@
                 "amount": 165310.0,
                 "comment": "ИЮНЬ",
                 "due_date": "30.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -902,7 +935,7 @@
                 "amount": 162687.0,
                 "comment": "ИЮНЬ",
                 "due_date": "30.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -1084,7 +1117,7 @@
                 "amount": 41480.0,
                 "comment": "ИЮНЬ",
                 "due_date": "20.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-20"
             }
         ],
@@ -1231,7 +1264,7 @@
                 "amount": 66002.0,
                 "comment": "ИЮНЬ",
                 "due_date": "30.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -1280,7 +1313,7 @@
                 "amount": 165005.0,
                 "comment": "ИЮНЬ",
                 "due_date": "30.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -1329,7 +1362,7 @@
                 "amount": 157502.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -2337,17 +2370,24 @@
     },
     {
         "id": 76,
-        "app_no": "",
+        "app_no": "67",
         "bill_no": "ОМ-13211",
         "service": "Транспорт Якутск",
         "entity": "БЦ",
         "period": "ИЮН",
-        "status": "-",
+        "status": "ПОДПИСАНО",
         "total_sum": 390400.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 390400.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/pooG/m1orDM3aX",
                 "disabled": false
             }
         }
@@ -2371,14 +2411,21 @@
     },
     {
         "id": 78,
-        "app_no": "",
+        "app_no": "68",
         "bill_no": "ОМ-13228",
         "service": "Якутия, сайты, июнь",
         "entity": "БЦ",
         "period": "ИЮН",
-        "status": "-",
+        "status": "ПОДПИСАНО",
         "total_sum": 56120.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 56120.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
                 "url": "",
@@ -2406,7 +2453,7 @@
     {
         "id": 80,
         "app_no": "ДС1 к 360",
-        "bill_no": "ОМ-13239",
+        "bill_no": "ОМ-13241",
         "service": "Фудсити атриум перемонтаж",
         "entity": "МКК",
         "period": "МАЙ",
@@ -2423,7 +2470,7 @@
     {
         "id": 81,
         "app_no": "ДС1 к 301",
-        "bill_no": "ОМ-13241",
+        "bill_no": "ОМ-13239",
         "service": "Фудсити атриум перемонтаж",
         "entity": "РНКО",
         "period": "МАЙ",
@@ -3170,12 +3217,12 @@
     },
     {
         "id": 118,
-        "app_no": "Приложение",
+        "app_no": "70",
         "bill_no": "ОМ-13301",
         "service": "Пицца 19 июня",
         "entity": "БЦ",
         "period": "ИЮН",
-        "status": "-",
+        "status": "ОТПРАВЛЕНО",
         "total_sum": 56709.26,
         "payments": [],
         "photo_reports": {
