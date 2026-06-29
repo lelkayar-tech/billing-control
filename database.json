@@ -8,8 +8,15 @@
         "period": "ИЮН",
         "total_sum": 244000.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 244000.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "status_date": "",
         "photo_reports": {
             "ИЮН": {
@@ -158,11 +165,18 @@
         "period": "ИЮН",
         "total_sum": 39966.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 39966.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/Qbca/nynXSj3u2",
+                "url": "",
                 "disabled": false
             }
         }
@@ -2508,12 +2522,19 @@
         "service": "Рынки Хабаровск, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 22936.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 22936.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "https://cloud.mail.ru/public/nd3w/f9G4M9FsG",
+                "url": "",
                 "disabled": false
             }
         }
