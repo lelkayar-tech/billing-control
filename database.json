@@ -245,7 +245,7 @@
                 "amount": 64965.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -330,7 +330,7 @@
                 "amount": 934825.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
