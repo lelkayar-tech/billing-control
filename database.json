@@ -72,8 +72,15 @@
         "period": "ИЮН",
         "total_sum": 99308.0,
         "deadline": "",
-        "payments": [],
-        "status": "ОТПРАВЛЕНО",
+        "payments": [
+            {
+                "amount": 99308.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-07-10",
+                "status": "waiting"
+            }
+        ],
+        "status": "ПОДПИСАНО",
         "photo_reports": {
             "ИЮН": {
                 "url": "https://cloud.mail.ru/public/CJYT/uNSi4JrBV",
@@ -2355,12 +2362,31 @@
         "service": "Рынки билайн, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 371490.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 24400.0,
+                "comment": "Изготовление",
+                "date": "2026-06-30",
+                "status": "waiting"
+            },
+            {
+                "amount": 322690.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            },
+            {
+                "amount": 24400.0,
+                "comment": "ИЮЛЬ",
+                "date": "2026-06-30",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/rcva/7KHMqt1qR",
                 "disabled": false
             }
         }
@@ -2413,12 +2439,19 @@
         "service": "Автовокзалы Нск, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 40321.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 40321.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-07-03",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/Whg1/F2taJT4dX",
                 "disabled": false
             }
         }
