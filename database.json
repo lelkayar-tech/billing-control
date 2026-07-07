@@ -127,7 +127,7 @@
                 "amount": 120902.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -152,7 +152,7 @@
                 "amount": 35258.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -202,7 +202,7 @@
                 "amount": 103212.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -227,7 +227,7 @@
                 "amount": 9760.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -268,7 +268,7 @@
         "app_no": "379",
         "entity": "МКК",
         "bill_no": "ОМ-13153",
-        "service": "Казанский, июнь",
+        "service": "Казанский, июнь-июль",
         "period": "ИЮН, ИЮЛ",
         "total_sum": 727974.0,
         "deadline": "",
@@ -277,7 +277,7 @@
                 "amount": 363987.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             },
             {
                 "amount": 363987.0,
@@ -866,7 +866,7 @@
                 "amount": 934825.0,
                 "comment": "МАЙ",
                 "date": "2026-05-31",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "status": "ПОДПИСАНО",
@@ -2345,7 +2345,7 @@
                 "amount": 18544.0,
                 "comment": "ИЮНЬ",
                 "date": "2026-06-30",
-                "status": "waiting"
+                "status": "paid"
             }
         ],
         "photo_reports": {
@@ -2398,12 +2398,19 @@
         "service": "Транспорт билайн, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 931006.4,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 931006.4,
+                "comment": "ИЮНЬ",
+                "date": "2026-07-10",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/vVa8/p9oofp1Lm",
                 "disabled": false
             }
         }
@@ -2506,7 +2513,14 @@
         "period": "МАЙ",
         "status": "ОТПРАВЛЕНО",
         "total_sum": 56730.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 56730.0,
+                "comment": "МАЙ",
+                "date": "2026-07-06",
+                "status": "paid"
+            }
+        ],
         "photo_reports": {
             "МАЙ": {
                 "url": "",
@@ -2538,9 +2552,16 @@
         "service": "Транспорт Мск, смена макета",
         "entity": "РНКО",
         "period": "МАЙ",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 26840.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 26840.0,
+                "comment": "ПРОИЗВОДСТВО",
+                "date": "2026-08-10",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "МАЙ": {
                 "url": "",
@@ -2579,12 +2600,19 @@
         "service": "Транспорт Мск, июнь",
         "entity": "РНКО",
         "period": "ИЮН",
-        "status": "ОТПРАВЛЕНО",
+        "status": "ПОДПИСАНО",
         "total_sum": 35258.0,
-        "payments": [],
+        "payments": [
+            {
+                "amount": 35258.0,
+                "comment": "ИЮНЬ",
+                "date": "2026-07-10",
+                "status": "waiting"
+            }
+        ],
         "photo_reports": {
             "ИЮН": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/3swJ/WjRX26Xv9",
                 "disabled": false
             }
         }
@@ -3281,6 +3309,23 @@
         "payments": [],
         "photo_reports": {
             "ИЮН": {
+                "url": "",
+                "disabled": false
+            }
+        }
+    },
+    {
+        "id": 119,
+        "app_no": "Приложение",
+        "bill_no": "ОМ-13359",
+        "service": "победители пицца май",
+        "entity": "РНКО",
+        "period": "ИЮЛ",
+        "status": "126402,98",
+        "total_sum": 0.0,
+        "payments": [],
+        "photo_reports": {
+            "ИЮЛ": {
                 "url": "",
                 "disabled": false
             }
