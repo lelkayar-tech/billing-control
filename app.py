@@ -327,7 +327,24 @@ else ""
 
                 <td class="px-6 py-6 text-right font-mono text-sm font-black {'text-emerald-500' if debt<=0.1 else 'text-red-500'}">{format_curr(debt)}</td>
 
-                <td class="px-4 py-6 text-center">{f'<a href="/delete_item/{idx}" class="text-slate-200 hover:text-red-500">✕</a>' if not is_readonly else ""}</td>
+                <td class="px-4 py-6 text-center">
+                    {
+                      f'''
+                        <a href="/copy_item/{idx}"
+                            class="text-slate-300 hover:text-indigo-600 mr-3"
+                             title="Копировать">
+           📋
+                        </a>
+
+                        <a href="/delete_item/{idx}"
+                              class="text-slate-300 hover:text-red-500"
+                                title="Удалить">
+                                ✕
+                        </a>
+                        '''
+                        if not is_readonly else ""
+                    }
+                </td>
 
             </tr>
 
@@ -634,6 +651,41 @@ async def delete_item(item_id: int):
     db = load_db()
     save_db([i for i in db if i['id'] != item_id])
     return RedirectResponse(url="/")
+
+import copy
+
+
+@app.get("/copy_item/{item_id}")
+async def copy_item(item_id: int):
+
+    db = load_db()
+
+    original = next((x for x in db if x["id"] == item_id), None)
+
+    if original is None:
+        return RedirectResponse("/", status_code=303)
+
+    new_item = copy.deepcopy(original)
+
+    new_item["id"] = max(i["id"] for i in db) + 1
+
+    # очищаем поля
+    new_item["app_no"] = ""
+    new_item["bill_no"] = ""
+    new_item["period"] = ""
+    new_item["status"] = "-"
+
+    new_item["payments"] = []
+    new_item["photo_reports"] = {}
+
+    db.append(new_item)
+
+    save_db(db)
+
+    return RedirectResponse(
+        url=f"/#row-{new_item['id']}",
+        status_code=303
+    )
 
 
 if __name__ == "__main__":
