@@ -1464,7 +1464,7 @@
                 "amount": 105652.0,
                 "comment": "ИЮНЬ",
                 "due_date": "30.06.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-06-30"
             }
         ],
@@ -2345,7 +2345,7 @@
                 "amount": 402600.0,
                 "comment": "ИЮНЬ",
                 "due_date": "31.05.2026",
-                "status": "waiting",
+                "status": "paid",
                 "date": "2026-05-31"
             }
         ],
@@ -3055,7 +3055,7 @@
         "payments": [],
         "photo_reports": {
             "ИЮЛ": {
-                "url": "",
+                "url": "https://cloud.mail.ru/public/Pn8n/d6MZFCfen",
                 "disabled": false
             }
         }
