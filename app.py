@@ -5,10 +5,11 @@ from collections import defaultdict
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, Query, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from supabase import create_client
 
 from app_mode import is_request_allowed, resolve_app_mode
@@ -31,6 +32,15 @@ from periods_photos import (
     normalize_photo_report_payload,
     photo_report_is_overdue,
 )
+from reader_auth import (
+    SESSION_COOKIE_NAME,
+    SESSION_TTL_SECONDS,
+    create_reader_session,
+    reader_auth_is_configured,
+    reader_session_is_valid,
+    safe_next_path,
+    verify_reader_password,
+)
 
 
 # --------------------------------------------------
@@ -43,11 +53,22 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_SECRET_KEY = os.getenv("SUPABASE_SECRET_KEY")
 APP_MODE = resolve_app_mode(os.getenv("APP_MODE"))
 IS_EDIT_MODE = APP_MODE == "edit"
+READER_PASSWORD = os.getenv("READER_PASSWORD", "")
+READER_SESSION_SECRET = os.getenv("READER_SESSION_SECRET", "")
 
 if not SUPABASE_URL or not SUPABASE_SECRET_KEY:
     raise RuntimeError(
         "В .env должны быть заполнены SUPABASE_URL "
         "и SUPABASE_SECRET_KEY"
+    )
+
+if APP_MODE == "read" and not reader_auth_is_configured(
+    READER_PASSWORD,
+    READER_SESSION_SECRET,
+):
+    raise RuntimeError(
+        "Для APP_MODE=read должны быть заполнены READER_PASSWORD "
+        "и READER_SESSION_SECRET"
     )
 
 supabase = create_client(
@@ -56,6 +77,9 @@ supabase = create_client(
 )
 
 app = FastAPI(title="Billing Control v2")
+
+READER_AUTH_PATHS = frozenset({"/login", "/logout"})
+PUBLIC_READ_PATHS = frozenset({"/login", "/health"})
 
 
 @app.middleware("http")
@@ -67,7 +91,10 @@ async def block_mutations_in_read_mode(request: Request, call_next):
     пока APP_MODE явно не установлен в edit.
     """
 
-    if not is_request_allowed(APP_MODE, request.method):
+    if (
+        not is_request_allowed(APP_MODE, request.method)
+        and request.url.path not in READER_AUTH_PATHS
+    ):
         return JSONResponse(
             status_code=403,
             content={
@@ -80,6 +107,42 @@ async def block_mutations_in_read_mode(request: Request, call_next):
         )
 
     return await call_next(request)
+
+
+@app.middleware("http")
+async def require_password_in_read_mode(request: Request, call_next):
+    """Закрывает читательскую версию подписанной cookie-сессией."""
+
+    if APP_MODE != "read" or request.url.path in PUBLIC_READ_PATHS:
+        return await call_next(request)
+
+    session_token = request.cookies.get(SESSION_COOKIE_NAME)
+    if not reader_session_is_valid(
+        session_token,
+        READER_SESSION_SECRET,
+    ):
+        if request.method.upper() in {"GET", "HEAD"}:
+            requested_path = request.url.path
+            if request.url.query:
+                requested_path += f"?{request.url.query}"
+            return RedirectResponse(
+                url=f"/login?next={quote(requested_path, safe='')}",
+                status_code=303,
+                headers={"Cache-Control": "no-store"},
+            )
+
+        return JSONResponse(
+            status_code=401,
+            content={"detail": "Требуется пароль читательской версии."},
+            headers={"Cache-Control": "no-store"},
+        )
+
+    response = await call_next(request)
+    response.headers["Cache-Control"] = "private, no-store"
+    response.headers["Vary"] = "Cookie"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "no-referrer"
+    return response
 
 
 MONTHS = {
@@ -2514,6 +2577,177 @@ def photo_reports_html(
 # Страница
 # --------------------------------------------------
 
+def reader_login_page(
+    *,
+    next_path: str = "/",
+    error_message: str = "",
+) -> str:
+    error_html = ""
+    if error_message:
+        error_html = (
+            '<div class="login-error" role="alert">'
+            f"{escape(error_message)}"
+            "</div>"
+        )
+
+    return f"""<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Billing Control — вход</title>
+    <style>
+        * {{ box-sizing: border-box; }}
+        body {{
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: #f4f6f8;
+            color: #1f2937;
+            font-family: Arial, sans-serif;
+        }}
+        .login-card {{
+            width: min(100%, 420px);
+            padding: 32px;
+            border: 1px solid #dfe3e8;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+        }}
+        h1 {{ margin: 0 0 8px; font-size: 24px; }}
+        p {{ margin: 0 0 24px; color: #667085; line-height: 1.45; }}
+        label {{ display: block; margin-bottom: 8px; font-weight: 700; }}
+        input {{
+            width: 100%;
+            height: 44px;
+            padding: 0 12px;
+            border: 1px solid #cfd5dc;
+            border-radius: 8px;
+            font: inherit;
+        }}
+        input:focus {{
+            outline: 3px solid rgba(37, 99, 235, 0.16);
+            border-color: #2563eb;
+        }}
+        button {{
+            width: 100%;
+            height: 44px;
+            margin-top: 16px;
+            border: 0;
+            border-radius: 8px;
+            background: #111827;
+            color: #ffffff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }}
+        .login-error {{
+            margin-bottom: 16px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: #fee2e2;
+            color: #991b1b;
+        }}
+    </style>
+</head>
+<body>
+    <main class="login-card">
+        <h1>Billing Control</h1>
+        <p>Введите пароль для доступа к читательской версии.</p>
+        {error_html}
+        <form method="post" action="/login" autocomplete="on">
+            <input
+                type="hidden"
+                name="next"
+                value="{escape(safe_next_path(next_path))}"
+            >
+            <label for="password">Пароль</label>
+            <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                autofocus
+            >
+            <button type="submit">Войти</button>
+        </form>
+    </main>
+</body>
+</html>"""
+
+
+@app.get("/login", response_class=HTMLResponse)
+def reader_login_form(
+    request: Request,
+    next: str | None = Query(default=None),
+):
+    if APP_MODE != "read":
+        return RedirectResponse(url="/", status_code=303)
+
+    if reader_session_is_valid(
+        request.cookies.get(SESSION_COOKIE_NAME),
+        READER_SESSION_SECRET,
+    ):
+        return RedirectResponse(
+            url=safe_next_path(next),
+            status_code=303,
+        )
+
+    return HTMLResponse(
+        reader_login_page(next_path=safe_next_path(next)),
+        headers={"Cache-Control": "no-store"},
+    )
+
+
+@app.post("/login", response_class=HTMLResponse)
+async def reader_login_submit(request: Request):
+    if APP_MODE != "read":
+        return RedirectResponse(url="/", status_code=303)
+
+    form = await request.form()
+    password = str(form.get("password") or "")
+    next_path = safe_next_path(str(form.get("next") or "/"))
+
+    if not verify_reader_password(password, READER_PASSWORD):
+        return HTMLResponse(
+            reader_login_page(
+                next_path=next_path,
+                error_message="Неверный пароль.",
+            ),
+            status_code=401,
+            headers={"Cache-Control": "no-store"},
+        )
+
+    response = RedirectResponse(url=next_path, status_code=303)
+    response.set_cookie(
+        key=SESSION_COOKIE_NAME,
+        value=create_reader_session(READER_SESSION_SECRET),
+        max_age=SESSION_TTL_SECONDS,
+        httponly=True,
+        secure=True,
+        samesite="lax",
+        path="/",
+    )
+    response.headers["Cache-Control"] = "no-store"
+    return response
+
+
+@app.post("/logout")
+def reader_logout() -> RedirectResponse:
+    response = RedirectResponse(url="/login", status_code=303)
+    response.delete_cookie(
+        key=SESSION_COOKIE_NAME,
+        path="/",
+        httponly=True,
+        secure=True,
+        samesite="lax",
+    )
+    response.headers["Cache-Control"] = "no-store"
+    return response
+
 @app.get("/", response_class=HTMLResponse)
 def dashboard(
     entity: str | None = Query(default=None),
@@ -2712,6 +2946,13 @@ def dashboard(
         if IS_EDIT_MODE
         else "только просмотр"
     )
+    reader_logout_html = ""
+    if not IS_EDIT_MODE:
+        reader_logout_html = """
+        <form method="post" action="/logout">
+            <button class="logout-button" type="submit">Выйти</button>
+        </form>
+        """
 
     html_page = f"""
     <!DOCTYPE html>
@@ -2797,6 +3038,29 @@ def dashboard(
                 font-size: 11px;
                 font-weight: 800;
                 text-transform: uppercase;
+            }}
+
+            .header-actions {{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }}
+
+            .header-actions form {{
+                margin: 0;
+            }}
+
+            .logout-button {{
+                padding: 10px 14px;
+                border: 1px solid var(--slate-200);
+                border-radius: 14px;
+                background: var(--white);
+                color: var(--slate-500);
+                font: inherit;
+                font-size: 11px;
+                font-weight: 800;
+                text-transform: uppercase;
+                cursor: pointer;
             }}
 
             .mode-read {{
@@ -4093,8 +4357,11 @@ def dashboard(
         <div class="container">
             <div class="header">
                 <h1>Billing <span>Control</span></h1>
-                <div class="mode-badge {mode_badge_class}">
-                    v2 · Supabase · {mode_badge_text}
+                <div class="header-actions">
+                    <div class="mode-badge {mode_badge_class}">
+                        v2 · Supabase · {mode_badge_text}
+                    </div>
+                    {reader_logout_html}
                 </div>
             </div>
 
