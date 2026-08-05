@@ -253,5 +253,33 @@ class PhotoReportPresentationTests(unittest.TestCase):
         self.assertIn("Изменить фотоотчёт", source)
 
 
+class PhotoReportFilterRemovalTests(unittest.TestCase):
+    def test_dashboard_keeps_only_approved_filter_groups(self) -> None:
+        start = APP_SOURCE.index('@app.get("/", response_class=HTMLResponse)')
+        end = APP_SOURCE.index('@app.get("/health")', start)
+        source = APP_SOURCE[start:end]
+
+        for title in ("Юридическое лицо", "Месяц фотоотчёта", "Статус"):
+            with self.subTest(title=title):
+                self.assertIn(f'<div class="filter-title">{title}</div>', source)
+
+        self.assertEqual(source.count('class="filter-title"'), 3)
+        self.assertNotIn('<div class="filter-title">Фотоотчёт</div>', source)
+        self.assertNotIn("photo_state", source)
+        self.assertNotIn("НЕ ТРЕБУЕТСЯ", source)
+
+    def test_remaining_filtering_and_three_column_layout_stay_in_place(self) -> None:
+        start = APP_SOURCE.index('@app.get("/", response_class=HTMLResponse)')
+        end = APP_SOURCE.index('@app.get("/health")', start)
+        source = APP_SOURCE[start:end]
+
+        self.assertIn('if entity and item["entity_name"] != entity:', source)
+        self.assertIn("if status and app_status != status:", source)
+        self.assertIn("if month:", source)
+        self.assertIn('for report in item["photo_reports"]', source)
+        self.assertIn("grid-template-columns: 1fr 1.4fr 1.1fr;", source)
+        self.assertIn('<a class="reset-link" href="/">', source)
+
+
 if __name__ == "__main__":
     unittest.main()

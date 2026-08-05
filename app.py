@@ -30,7 +30,6 @@ from periods_photos import (
     normalize_periods,
     normalize_photo_report_payload,
     photo_report_is_overdue,
-    report_matches_state,
 )
 
 
@@ -2520,7 +2519,6 @@ def dashboard(
     entity: str | None = Query(default=None),
     month: str | None = Query(default=None),
     status: str | None = Query(default=None),
-    photo_state: str | None = Query(default=None),
 ) -> HTMLResponse:
     today = datetime.date.today()
     rows = load_dashboard_data()
@@ -2528,7 +2526,6 @@ def dashboard(
         "entity": entity,
         "month": month,
         "status": status,
-        "photo_state": photo_state,
     }
 
     prepared_rows: list[dict[str, Any]] = []
@@ -2556,18 +2553,14 @@ def dashboard(
         if status and app_status != status:
             continue
 
-        if month or photo_state:
+        if month:
             matching_reports = [
                 report
                 for report in item["photo_reports"]
-                if (
-                    not month
-                    or MONTHS.get(
-                        int(report.get("report_month") or 0),
-                        "",
-                    ) == month
-                )
-                and report_matches_state(report, photo_state)
+                if MONTHS.get(
+                    int(report.get("report_month") or 0),
+                    "",
+                ) == month
             ]
 
             if not matching_reports:
@@ -2605,22 +2598,6 @@ def dashboard(
         </a>
         """
         for status_name in statuses
-    )
-
-    photo_states = [
-        ("present", "ЕСТЬ"),
-        ("missing", "НЕТ"),
-        ("not_required", "НЕ ТРЕБУЕТСЯ"),
-    ]
-
-    photo_state_buttons = "".join(
-        f"""
-        <a class="filter-chip {'active' if photo_state == value else ''}"
-           href="{escape(build_filter_url(current_filters, photo_state=value))}">
-            {label}
-        </a>
-        """
-        for value, label in photo_states
     )
 
     rows_html = ""
@@ -2839,7 +2816,7 @@ def dashboard(
                 border-radius: 30px;
                 background: var(--indigo-soft);
                 display: grid;
-                grid-template-columns: 1fr 1.4fr 1.1fr 1.1fr;
+                grid-template-columns: 1fr 1.4fr 1.1fr;
                 gap: 24px;
             }}
 
@@ -4140,13 +4117,6 @@ def dashboard(
                     <div class="filter-title">Статус</div>
                     <div class="filter-list">
                         {status_buttons}
-                    </div>
-                </div>
-
-                <div>
-                    <div class="filter-title">Фотоотчёт</div>
-                    <div class="filter-list">
-                        {photo_state_buttons}
                     </div>
 
                     <a class="reset-link" href="/">

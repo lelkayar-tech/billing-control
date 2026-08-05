@@ -171,25 +171,6 @@ def normalize_photo_report_payload(
     }
 
 
-def report_matches_state(
-    report: dict[str, Any],
-    state: str | None,
-) -> bool:
-    if not state:
-        return True
-
-    if state == "present":
-        return bool(report.get("url")) and not report.get("not_required")
-
-    if state == "missing":
-        return not report.get("url") and not report.get("not_required")
-
-    if state == "not_required":
-        return bool(report.get("not_required"))
-
-    return False
-
-
 def photo_report_month_end(
     report: dict[str, Any],
 ) -> datetime.date:
@@ -226,7 +207,11 @@ def build_filter_url(
 ) -> str:
     """Строит ссылку фильтра, не сбрасывая остальные выбранные значения."""
 
-    merged = {**current, **updates}
+    allowed_keys = ("entity", "month", "status")
+    merged = {
+        key: updates.get(key, current.get(key))
+        for key in allowed_keys
+    }
     query = {
         key: value
         for key, value in merged.items()

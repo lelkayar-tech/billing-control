@@ -10,7 +10,6 @@ from periods_photos import (
     normalize_photo_url,
     photo_report_is_overdue,
     photo_report_month_end,
-    report_matches_state,
 )
 
 
@@ -97,18 +96,6 @@ class PhotoReportValidationTests(unittest.TestCase):
             },
         )
 
-    def test_report_states_are_mutually_exclusive(self) -> None:
-        present = {"url": "https://example.com", "not_required": False}
-        missing = {"url": None, "not_required": False}
-        not_required = {"url": None, "not_required": True}
-
-        self.assertTrue(report_matches_state(present, "present"))
-        self.assertTrue(report_matches_state(missing, "missing"))
-        self.assertTrue(
-            report_matches_state(not_required, "not_required")
-        )
-        self.assertFalse(report_matches_state(missing, "present"))
-
     def test_report_uses_end_of_its_own_month(self) -> None:
         report = {"report_year": 2026, "report_month": 6}
         self.assertEqual(
@@ -150,6 +137,7 @@ class FilterUrlTests(unittest.TestCase):
         self.assertIn("entity=%D0%91%D0%A6", combined)
         self.assertIn("month=%D0%98%D0%AE%D0%9D", combined)
         self.assertIn("status=", combined)
+        self.assertNotIn("photo_state=", combined)
         self.assertNotIn("entity=", cleared)
         self.assertIn("month=", cleared)
 
