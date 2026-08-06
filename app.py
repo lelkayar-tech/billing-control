@@ -2749,7 +2749,7 @@ def dashboard(
         "entity": entity,
         "month": month,
         "status": status,
-        "photo_overdue": photo_overdue,
+        "photo_overdue": photo_overdue if IS_EDIT_MODE else None,
     }
 
     prepared_rows: list[dict[str, Any]] = []
@@ -2791,6 +2791,8 @@ def dashboard(
                 continue
 
         if (
+            IS_EDIT_MODE
+            and
             photo_overdue == "1"
             and not application_has_overdue_photo_report(
                 item["photo_reports"],
@@ -2833,12 +2835,14 @@ def dashboard(
         for status_name in statuses
     )
 
-    photo_overdue_button = f"""
-    <a class="filter-chip {'active' if photo_overdue == '1' else ''}"
-       href="{escape(build_filter_url(current_filters, photo_overdue='1'))}">
-        ПРОСРОЧЕН ФО
-    </a>
-    """
+    photo_overdue_button = ""
+    if IS_EDIT_MODE:
+        photo_overdue_button = f"""
+        <a class="filter-chip {'active' if photo_overdue == '1' else ''}"
+           href="{escape(build_filter_url(current_filters, photo_overdue='1'))}">
+            ПРОСРОЧЕН ФО
+        </a>
+        """
 
     rows_html = ""
 

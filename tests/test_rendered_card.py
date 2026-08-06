@@ -212,6 +212,71 @@ class RenderedCardTests(unittest.TestCase):
         self.assertNotIn("invoice-form-1-10", invoice_html)
         self.assertNotIn("deleteInvoice(", invoice_html)
 
+    def test_overdue_photo_filter_is_edit_only(self) -> None:
+        previous = self.app.IS_EDIT_MODE
+
+        try:
+            with patch.object(self.app, "load_dashboard_data", return_value=[]):
+                self.app.IS_EDIT_MODE = True
+                edit_html = self.app.dashboard().content
+                self.app.IS_EDIT_MODE = False
+                read_html = self.app.dashboard().content
+                legacy_url_html = self.app.dashboard(photo_overdue="1").content
+        finally:
+            self.app.IS_EDIT_MODE = previous
+
+        self.assertIn("ПРОСРОЧЕН ФО", edit_html)
+        self.assertNotIn("ПРОСРОЧЕН ФО", read_html)
+        self.assertNotIn("ПРОСРОЧЕН ФО", legacy_url_html)
+        self.assertNotIn("photo_overdue=1", legacy_url_html)
+
+    def test_overdue_photo_parameter_filters_only_in_edit_mode(self) -> None:
+        previous = self.app.IS_EDIT_MODE
+        rows = [self.dashboard_row(1, "OVERDUE"), self.dashboard_row(2, "CURRENT")]
+
+        try:
+            with (
+                patch.object(self.app, "load_dashboard_data", return_value=rows),
+                patch.object(
+                    self.app,
+                    "application_has_overdue_photo_report",
+                    side_effect=lambda reports, _today: reports[0]["overdue"],
+                ),
+                patch.object(self.app, "application_card_html", return_value=""),
+                patch.object(self.app, "finance_table_html", return_value=""),
+                patch.object(self.app, "photo_reports_html", return_value=""),
+            ):
+                self.app.IS_EDIT_MODE = True
+                edit_html = self.app.dashboard(photo_overdue="1").content
+                self.app.IS_EDIT_MODE = False
+                read_html = self.app.dashboard(photo_overdue="1").content
+        finally:
+            self.app.IS_EDIT_MODE = previous
+
+        self.assertIn("OVERDUE", edit_html)
+        self.assertNotIn("CURRENT", edit_html)
+        self.assertIn("OVERDUE", read_html)
+        self.assertIn("CURRENT", read_html)
+
+    @staticmethod
+    def dashboard_row(application_id: int, app_no: str) -> dict:
+        return {
+            "application": {
+                "id": application_id,
+                "app_no": app_no,
+                "content": app_no,
+                "total_sum": "0",
+                "sent_at": None,
+                "signed_at": None,
+            },
+            "invoices": [],
+            "periods": [],
+            "photo_reports": [{"overdue": app_no == "OVERDUE"}],
+            "entity_name": "Тест",
+            "legal_entities": [],
+            "upds_by_invoice": {},
+        }
+
 
 if __name__ == "__main__":
     unittest.main()
