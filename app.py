@@ -3984,7 +3984,25 @@ def dashboard(
             /* Этап 5: карточка приложения как рабочий экран CRM. */
             .details-row > td {{
                 padding: 12px;
-                background: #f7f8fc;
+                background: #f0f6ff;
+            }}
+
+            .application-row:has(.details-row:not(.hidden)) .summary-row > td {{
+                background: #f0f6ff;
+                border-top: 1px solid #cbd5e1;
+            }}
+
+            .application-row:has(.details-row:not(.hidden)) .summary-row > td:first-child,
+            .details-row:not(.hidden) > td {{
+                border-left: 3px solid #818cf8;
+            }}
+
+            .details-row:not(.hidden) > td {{
+                border-bottom: 2px solid #cbd5e1;
+            }}
+
+            .details-row:not(.hidden) .panel {{
+                background: #f0f6ff;
             }}
 
             .details-grid {{
