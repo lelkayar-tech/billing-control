@@ -196,9 +196,24 @@ def photo_report_is_overdue(
     report: dict[str, Any],
     today: datetime.date,
 ) -> bool:
-    """Проверяет, закончился ли месяц конкретного фотоотчёта."""
+    """Проверяет динамическую просрочку конкретного фотоотчёта."""
 
-    return photo_report_month_end(report) < today
+    month_end = photo_report_month_end(report)
+    return (
+        month_end != datetime.date.min
+        and month_end < today
+        and not str(report.get("url") or "").strip()
+        and not bool(report.get("not_required"))
+    )
+
+
+def application_has_overdue_photo_report(
+    reports: list[dict[str, Any]],
+    today: datetime.date,
+) -> bool:
+    """Проверяет наличие хотя бы одного просроченного фотоотчёта."""
+
+    return any(photo_report_is_overdue(report, today) for report in reports)
 
 
 def build_filter_url(
@@ -207,7 +222,7 @@ def build_filter_url(
 ) -> str:
     """Строит ссылку фильтра, не сбрасывая остальные выбранные значения."""
 
-    allowed_keys = ("entity", "month", "status")
+    allowed_keys = ("entity", "month", "status", "photo_overdue")
     merged = {
         key: updates.get(key, current.get(key))
         for key in allowed_keys

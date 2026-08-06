@@ -47,6 +47,7 @@ def load_app_module():
     fake_responses = types.ModuleType("fastapi.responses")
     fake_responses.HTMLResponse = DummyResponse
     fake_responses.JSONResponse = DummyResponse
+    fake_responses.RedirectResponse = DummyResponse
     fake_supabase = types.ModuleType("supabase")
     fake_supabase.create_client = lambda *_args, **_kwargs: object()
 
@@ -180,6 +181,7 @@ class RenderedCardTests(unittest.TestCase):
         )
         self.assertIn("photo-not-required", result)
         self.assertIn("photo-overdue photo-blink", result)
+        self.assertIn("photo-record-overdue", result)
         self.assertIn(
             '<span class="photo-period">ИЮЛ 2026</span>',
             result,

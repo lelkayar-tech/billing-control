@@ -232,6 +232,8 @@ class PhotoReportPresentationTests(unittest.TestCase):
 
         self.assertIn("photo-not-required", source)
         self.assertIn("photo-overdue photo-blink", source)
+        self.assertIn("photo-record-overdue", source)
+        self.assertIn('content: " · ПРОСРОЧЕН";', APP_SOURCE)
         self.assertIn(
             "photo_report_is_overdue(report, today)",
             source,
@@ -253,7 +255,7 @@ class PhotoReportPresentationTests(unittest.TestCase):
         self.assertIn("Изменить фотоотчёт", source)
 
 
-class PhotoReportFilterRemovalTests(unittest.TestCase):
+class PhotoReportOperationalFilterTests(unittest.TestCase):
     def test_dashboard_keeps_only_approved_filter_groups(self) -> None:
         start = APP_SOURCE.index('@app.get("/", response_class=HTMLResponse)')
         end = APP_SOURCE.index('@app.get("/health")', start)
@@ -264,8 +266,12 @@ class PhotoReportFilterRemovalTests(unittest.TestCase):
                 self.assertIn(f'<div class="filter-title">{title}</div>', source)
 
         self.assertEqual(source.count('class="filter-title"'), 3)
-        self.assertNotIn('<div class="filter-title">Фотоотчёт</div>', source)
+        self.assertIn("ПРОСРОЧЕН ФО", source)
+        self.assertIn("photo_overdue", source)
         self.assertNotIn("photo_state", source)
+        self.assertNotIn("Есть фотоотчёт", source)
+        self.assertNotIn("Нет фотоотчёта", source)
+        self.assertNotIn("Фотоотчёт не требуется", source)
         self.assertNotIn("НЕ ТРЕБУЕТСЯ", source)
 
     def test_remaining_filtering_and_three_column_layout_stay_in_place(self) -> None:
@@ -276,6 +282,8 @@ class PhotoReportFilterRemovalTests(unittest.TestCase):
         self.assertIn('if entity and item["entity_name"] != entity:', source)
         self.assertIn("if status and app_status != status:", source)
         self.assertIn("if month:", source)
+        self.assertIn('photo_overdue == "1"', source)
+        self.assertIn("application_has_overdue_photo_report(", source)
         self.assertIn('for report in item["photo_reports"]', source)
         self.assertIn("grid-template-columns: 1fr 1.4fr 1.1fr;", source)
         self.assertIn('<a class="reset-link" href="/">', source)

@@ -27,6 +27,7 @@ from finance_records import (
 )
 from periods_photos import (
     InputValidationError,
+    application_has_overdue_photo_report,
     build_filter_url,
     normalize_periods,
     normalize_photo_report_payload,
@@ -2438,11 +2439,8 @@ def photo_reports_html(
         safe_url = escape(report.get("url") or "")
         comment = escape(report.get("comment") or "")
         is_not_required = bool(report.get("not_required"))
-        is_overdue = (
-            not is_not_required
-            and not report.get("url")
-            and photo_report_is_overdue(report, today)
-        )
+        is_overdue = photo_report_is_overdue(report, today)
+        overdue_class = " photo-record-overdue" if is_overdue else ""
 
         if report.get("url") and not is_not_required:
             period_title = (
@@ -2471,7 +2469,7 @@ def photo_reports_html(
 
             result += f"""
             <div
-                class="photo-record"
+                class="photo-record{overdue_class}"
                 id="photo-report-{report_id}"
             >
                 <div class="photo-record-view">
@@ -2565,7 +2563,7 @@ def photo_reports_html(
             continue
 
         result += f"""
-        <div class="photo-row">
+        <div class="photo-row{overdue_class}">
             {period_title}
         </div>
         """
@@ -2753,6 +2751,7 @@ def dashboard(
     entity: str | None = Query(default=None),
     month: str | None = Query(default=None),
     status: str | None = Query(default=None),
+    photo_overdue: str | None = Query(default=None),
 ) -> HTMLResponse:
     today = datetime.date.today()
     rows = load_dashboard_data()
@@ -2760,6 +2759,7 @@ def dashboard(
         "entity": entity,
         "month": month,
         "status": status,
+        "photo_overdue": photo_overdue,
     }
 
     prepared_rows: list[dict[str, Any]] = []
@@ -2800,6 +2800,15 @@ def dashboard(
             if not matching_reports:
                 continue
 
+        if (
+            photo_overdue == "1"
+            and not application_has_overdue_photo_report(
+                item["photo_reports"],
+                today,
+            )
+        ):
+            continue
+
         prepared_rows.append(item)
 
     entity_buttons = "".join(
@@ -2833,6 +2842,13 @@ def dashboard(
         """
         for status_name in statuses
     )
+
+    photo_overdue_button = f"""
+    <a class="filter-chip {'active' if photo_overdue == '1' else ''}"
+       href="{escape(build_filter_url(current_filters, photo_overdue='1'))}">
+        ПРОСРОЧЕН ФО
+    </a>
+    """
 
     rows_html = ""
 
@@ -3839,6 +3855,10 @@ def dashboard(
                 color: var(--red);
             }}
 
+            .photo-overdue::after {{
+                content: " · ПРОСРОЧЕН";
+            }}
+
             .photo-blink {{
                 animation: photo-alert 1.1s ease-in-out infinite;
             }}
@@ -4330,6 +4350,12 @@ def dashboard(
                 font-weight: 900;
             }}
 
+            .photo-row.photo-record-overdue,
+            .photo-record.photo-record-overdue {{
+                border-color: #fecaca;
+                background: #fff1f2;
+            }}
+
             .photo-editor:not(.hidden) {{
                 grid-template-areas:
                     "url checkbox"
@@ -4402,6 +4428,7 @@ def dashboard(
                     <div class="filter-title">Статус</div>
                     <div class="filter-list">
                         {status_buttons}
+                        {photo_overdue_button}
                     </div>
 
                     <a class="reset-link" href="/">

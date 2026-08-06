@@ -3,6 +3,7 @@ import unittest
 
 from periods_photos import (
     InputValidationError,
+    application_has_overdue_photo_report,
     build_filter_url,
     calendar_months,
     normalize_periods,
@@ -104,8 +105,18 @@ class PhotoReportValidationTests(unittest.TestCase):
         )
 
     def test_previous_month_is_overdue_during_continuing_placement(self) -> None:
-        june_report = {"report_year": 2026, "report_month": 6}
-        july_report = {"report_year": 2026, "report_month": 7}
+        june_report = {
+            "report_year": 2026,
+            "report_month": 6,
+            "url": None,
+            "not_required": False,
+        }
+        july_report = {
+            "report_year": 2026,
+            "report_month": 7,
+            "url": None,
+            "not_required": False,
+        }
         today = datetime.date(2026, 7, 28)
 
         self.assertTrue(photo_report_is_overdue(june_report, today))
@@ -121,6 +132,65 @@ class PhotoReportValidationTests(unittest.TestCase):
             )
         )
 
+    def test_future_month_without_url_is_not_overdue(self) -> None:
+        report = {
+            "report_year": 2027,
+            "report_month": 1,
+            "url": None,
+            "not_required": False,
+        }
+
+        self.assertFalse(
+            photo_report_is_overdue(report, datetime.date(2026, 12, 15))
+        )
+
+    def test_previous_month_with_url_is_not_overdue(self) -> None:
+        report = {
+            "report_year": 2026,
+            "report_month": 6,
+            "url": "https://example.com/report",
+            "not_required": False,
+        }
+
+        self.assertFalse(
+            photo_report_is_overdue(report, datetime.date(2026, 7, 1))
+        )
+
+    def test_previous_month_not_required_is_not_overdue(self) -> None:
+        report = {
+            "report_year": 2026,
+            "report_month": 6,
+            "url": None,
+            "not_required": True,
+        }
+
+        self.assertFalse(
+            photo_report_is_overdue(report, datetime.date(2026, 7, 1))
+        )
+
+    def test_application_matches_when_any_report_is_overdue(self) -> None:
+        reports = [
+            {
+                "report_year": 2026,
+                "report_month": 7,
+                "url": None,
+                "not_required": False,
+            },
+            {
+                "report_year": 2026,
+                "report_month": 6,
+                "url": None,
+                "not_required": False,
+            },
+        ]
+
+        self.assertTrue(
+            application_has_overdue_photo_report(
+                reports,
+                datetime.date(2026, 7, 28),
+            )
+        )
+
 
 class FilterUrlTests(unittest.TestCase):
     def test_combines_filters_and_can_clear_one(self) -> None:
@@ -128,7 +198,7 @@ class FilterUrlTests(unittest.TestCase):
             "entity": "БЦ",
             "month": "МАЙ",
             "status": "ОПЛАЧЕНО",
-            "photo_state": "missing",
+            "photo_overdue": "1",
         }
 
         combined = build_filter_url(current, month="ИЮН")
@@ -137,7 +207,7 @@ class FilterUrlTests(unittest.TestCase):
         self.assertIn("entity=%D0%91%D0%A6", combined)
         self.assertIn("month=%D0%98%D0%AE%D0%9D", combined)
         self.assertIn("status=", combined)
-        self.assertNotIn("photo_state=", combined)
+        self.assertIn("photo_overdue=1", combined)
         self.assertNotIn("entity=", cleared)
         self.assertIn("month=", cleared)
 
