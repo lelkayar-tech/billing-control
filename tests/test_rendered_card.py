@@ -127,7 +127,7 @@ class RenderedCardTests(unittest.TestCase):
 
         self.assertIn("ОМ-13290/1", result)
         self.assertIn("Просрочен", result)
-        self.assertIn("Пора сформировать", result)
+        self.assertIn("Сформирован", result)
         self.assertIn('class="invoice-paid"', result)
         self.assertIn('class="invoice-upd-status"', result)
         self.assertNotIn("Фактические оплаты", result)

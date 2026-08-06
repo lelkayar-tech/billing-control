@@ -15,6 +15,7 @@ from supabase import create_client
 from app_mode import is_request_allowed, resolve_app_mode
 from finance_records import (
     FinanceValidationError,
+    effective_upd_status,
     invoice_base_number,
     normalize_application_card_payload,
     normalize_application_sent_at_payload,
@@ -1948,29 +1949,18 @@ def finance_table_html(
             )
 
         upd = upds_by_invoice.get(invoice_id)
-        upd_status = str((upd or {}).get("status") or "waiting")
-        shipment_date = parse_date(invoice.get("shipment_date"))
-        upd_needs_attention = (
-            upd_status == "waiting"
-            and shipment_date is not None
-            and shipment_date <= today
+        upd_status = effective_upd_status(
+            (upd or {}).get("status"),
+            invoice.get("shipment_date"),
+            today,
         )
         upd_status_html = (
             '<span class="workflow-status '
-            + (
-                "workflow-overdue"
-                if upd_needs_attention
-                else f"workflow-upd-{escape(upd_status)}"
-            )
+            + f"workflow-upd-{escape(upd_status)}"
             + '">'
             + escape(upd_labels.get(upd_status, "Ожидает"))
             + "</span>"
         )
-
-        if upd_needs_attention:
-            upd_status_html += (
-                '<span class="upd-reminder">Пора сформировать</span>'
-            )
 
         invoice_edit_action = ""
         invoice_delete_action = ""

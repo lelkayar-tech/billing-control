@@ -168,15 +168,14 @@ class InvoiceWorkflowTests(unittest.TestCase):
         self.assertNotIn("Номер УПД", source)
         self.assertNotIn("Дата УПД", source)
 
-    def test_waiting_upd_gets_reminder_after_shipment_date(self) -> None:
+    def test_upd_status_is_calculated_from_shipment_date(self) -> None:
         start = APP_SOURCE.index("def finance_table_html(")
         end = APP_SOURCE.index("def upd_status_html(", start)
         source = APP_SOURCE[start:end]
 
-        self.assertIn('upd_status == "waiting"', source)
-        self.assertIn("shipment_date <= today", source)
-        self.assertIn("Пора сформировать", source)
-        self.assertNotIn('upd_status = "formed"', source)
+        self.assertIn("effective_upd_status(", source)
+        self.assertIn('invoice.get("shipment_date")', source)
+        self.assertNotIn("Пора сформировать", source)
 
     def test_invoice_save_uses_single_workflow_rpc(self) -> None:
         start = APP_SOURCE.index(

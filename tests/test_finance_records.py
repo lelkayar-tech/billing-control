@@ -1,7 +1,9 @@
+import datetime
 import unittest
 
 from finance_records import (
     FinanceValidationError,
+    effective_upd_status,
     invoice_base_number,
     normalize_application_card_payload,
     normalize_application_sent_at_payload,
@@ -12,6 +14,46 @@ from finance_records import (
     normalize_upd_payload,
     suggest_next_invoice_number,
 )
+
+
+class EffectiveUpdStatusTests(unittest.TestCase):
+    TODAY = datetime.date(2026, 8, 6)
+
+    def test_future_shipment_date_is_waiting(self) -> None:
+        self.assertEqual(
+            effective_upd_status("waiting", "2026-08-07", self.TODAY),
+            "waiting",
+        )
+
+    def test_shipment_date_today_is_formed(self) -> None:
+        self.assertEqual(
+            effective_upd_status("waiting", "2026-08-06", self.TODAY),
+            "formed",
+        )
+
+    def test_past_shipment_date_is_formed(self) -> None:
+        self.assertEqual(
+            effective_upd_status("waiting", "2026-08-05", self.TODAY),
+            "formed",
+        )
+
+    def test_missing_shipment_date_is_waiting(self) -> None:
+        self.assertEqual(
+            effective_upd_status("waiting", None, self.TODAY),
+            "waiting",
+        )
+
+    def test_sent_manual_status_has_priority(self) -> None:
+        self.assertEqual(
+            effective_upd_status("sent", "2026-08-05", self.TODAY),
+            "sent",
+        )
+
+    def test_signed_manual_status_has_priority(self) -> None:
+        self.assertEqual(
+            effective_upd_status("signed", "2026-08-05", self.TODAY),
+            "signed",
+        )
 
 
 class ApplicationValidationTests(unittest.TestCase):

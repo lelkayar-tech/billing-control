@@ -16,6 +16,31 @@ UPD_STATUS_VALUES = {
 }
 
 
+def effective_upd_status(
+    stored_status: Any,
+    shipment_date: Any,
+    today: datetime.date,
+) -> str:
+    """Возвращает отображаемый статус УПД без изменения данных в БД."""
+
+    normalized_status = str(stored_status or "waiting").strip().lower()
+
+    if normalized_status == "signed":
+        return "signed"
+
+    if normalized_status == "sent":
+        return "sent"
+
+    try:
+        parsed_shipment_date = datetime.date.fromisoformat(
+            str(shipment_date or "")
+        )
+    except ValueError:
+        return "waiting"
+
+    return "formed" if parsed_shipment_date <= today else "waiting"
+
+
 def invoice_base_number(invoice_no: Any) -> str:
     """
     Возвращает базовую часть номера счёта без числового суффикса.
