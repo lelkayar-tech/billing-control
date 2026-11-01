@@ -73,7 +73,7 @@ def render_history(rows, application_id):
     for place, entries in grouped.items():
         output.append('<section class="creative-place"><h4>' + escape(entries[0]["place_title"] or "Место не установлено") + '</h4><ul>')
         for item in entries:
-            source = ("ДС " if item["source_type"] == "supplement" else "Приложение ") + item["source_document_number"]
+            source = item["source_document_number"] if item["source_type"] == "supplement" else "Приложение " + item["source_document_number"]
             when = item["change_date"] or item["planned_from"] or "дата не указана"
             actual = item["actual_status"] or "не подтверждено"
             output.append('<li><strong>' + escape(item["layout_name"] or item["new_layout"] or "Макет не указан") +
