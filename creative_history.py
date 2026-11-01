@@ -60,10 +60,10 @@ def project_history(rows):
         items.sort(key=lambda x: (x["place_id"], x["change_date"] or x["planned_from"], x["source_application_id"]))
     return dict(history)
 
-def render_history(rows, application_id):
+def render_history(history, application_id):
     """Escape every imported field before insertion into HTML."""
     from html import escape
-    items = project_history(rows).get(str(application_id), [])
+    items = history.get(str(application_id), [])
     if not items:
         return '<p class="muted">Для этого приложения нет подтверждённых сведений о макетах в выгрузке.</p>'
     grouped = defaultdict(list)
@@ -74,10 +74,23 @@ def render_history(rows, application_id):
         output.append('<section class="creative-place"><h4>' + escape(entries[0]["place_title"] or "Место не установлено") + '</h4><ul>')
         for item in entries:
             source = item["source_document_number"] if item["source_type"] == "supplement" else "Приложение " + item["source_document_number"]
-            when = item["change_date"] or item["planned_from"] or "дата не указана"
-            actual = item["actual_status"] or "не подтверждено"
+            planned = item["planned_from"] or "не указана"
+            change = item["change_date"]
+            kind = item["change_kind"]
+            status = item["actual_status"]
+            if status == "installation_confirmed_by_user":
+                confirmation = "Установка подтверждена пользователем"
+                if item["user_confirmed_from"]:
+                    confirmation += " · с " + item["user_confirmed_from"]
+            elif status == "current_layout_confirmed_by_user_date_unknown":
+                confirmation = "Макет подтверждён, дата установки неизвестна"
+            elif status == "placement_ended_confirmed_by_user":
+                confirmation = "Размещение завершено (подтверждено)"
+            else:
+                confirmation = "Установка не подтверждена"
+            event = (" · событие: " + kind + " (" + change + ")") if change else ""
             output.append('<li><strong>' + escape(item["layout_name"] or item["new_layout"] or "Макет не указан") +
-                          '</strong> · ' + escape(source) + ' · с ' + escape(when) +
-                          ' · ' + escape(actual) + '</li>')
+                          '</strong> · ' + escape(source) + ' · план с ' + escape(planned) +
+                          escape(event) + ' · ' + escape(confirmation) + '</li>')
         output.append("</ul></section>")
     return "".join(output)
