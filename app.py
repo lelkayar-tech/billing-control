@@ -34,6 +34,8 @@ from periods_photos import (
     normalize_photo_report_payload,
     photo_report_is_overdue,
 )
+from creative_history import read_export, project_history, render_history
+
 from reader_auth import (
     SESSION_COOKIE_NAME,
     SESSION_TTL_SECONDS,
@@ -2844,6 +2846,33 @@ def dashboard(
         </a>
         """
 
+    # Optional, read-only Hermes export. No Supabase mutation or dependency.
+    creative_csv_path = os.getenv("MKK_CREATIVES_CSV", "")
+    creative_history = {}
+    if creative_csv_path and Path(creative_csv_path).is_file():
+        try:
+            creative_history = project_history(read_export(creative_csv_path))
+        except (OSError, ValueError) as exc:
+            print(f"Creative export unavailable: {exc}")
+
+    # Optional server-side storage, enabled only after a reviewed migration/import.
+    # Keep this opt-in so existing production instances remain unaffected.
+    if not creative_history and os.getenv("MKK_CREATIVES_DB_ENABLED") == "1":
+        try:
+            db_rows = fetch_all(
+                "mkk_creative_observations",
+                "parent_application_id,record",
+            )
+            from collections import defaultdict as _defaultdict
+            creative_history = _defaultdict(list)
+            for db_row in db_rows:
+                record = db_row.get("record")
+                if isinstance(record, dict):
+                    creative_history[str(db_row["parent_application_id"])].append(record)
+        except Exception as exc:
+            print(f"Creative database unavailable: {exc}")
+            creative_history = {}
+
     rows_html = ""
 
     for item in prepared_rows:
@@ -2875,6 +2904,15 @@ def dashboard(
             item["photo_reports"],
             today,
         )
+
+        creative_block = ""
+        if item["entity_name"] == "МКК" and creative_history:
+            creative_block = (
+                '<section class="panel panel-creatives">'
+                '<div class="panel-heading"><h3>Макеты и история замен</h3></div>'
+                + render_history(creative_history, application["id"])
+                + '</section>'
+            )
 
         rows_html += f"""
         <tbody class="application-row">
@@ -2920,6 +2958,8 @@ def dashboard(
                             </div>
                             {finance_block}
                         </section>
+
+                        {creative_block}
 
                         <section class="panel panel-photos">
                             <div class="panel-heading">
