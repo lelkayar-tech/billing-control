@@ -2855,6 +2855,24 @@ def dashboard(
         except (OSError, ValueError) as exc:
             print(f"Creative export unavailable: {exc}")
 
+    # Optional server-side storage, enabled only after a reviewed migration/import.
+    # Keep this opt-in so existing production instances remain unaffected.
+    if not creative_history and os.getenv("MKK_CREATIVES_DB_ENABLED") == "1":
+        try:
+            db_rows = fetch_all(
+                "mkk_creative_observations",
+                "parent_application_id,record",
+            )
+            from collections import defaultdict as _defaultdict
+            creative_history = _defaultdict(list)
+            for db_row in db_rows:
+                record = db_row.get("record")
+                if isinstance(record, dict):
+                    creative_history[str(db_row["parent_application_id"])].append(record)
+        except Exception as exc:
+            print(f"Creative database unavailable: {exc}")
+            creative_history = {}
+
     rows_html = ""
 
     for item in prepared_rows:
