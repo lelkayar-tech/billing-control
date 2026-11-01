@@ -74,6 +74,7 @@ def render_history(history, application_id):
         output.append('<section class="creative-place"><h4>' + escape(entries[0]["place_title"] or "Место не установлено") + '</h4><ul>')
         for item in entries:
             source = item["source_document_number"] if item["source_type"] == "supplement" else "Приложение " + item["source_document_number"]
+            approval = "согласовано" if item["source_document_status"] == "approved" else "черновик / не согласовано"
             planned = item["planned_from"] or "не указана"
             change = item["change_date"]
             kind = item["change_kind"]
@@ -90,7 +91,7 @@ def render_history(history, application_id):
                 confirmation = "Установка не подтверждена"
             event = (" · событие: " + kind + " (" + change + ")") if change else ""
             output.append('<li><strong>' + escape(item["layout_name"] or item["new_layout"] or "Макет не указан") +
-                          '</strong> · ' + escape(source) + ' · план с ' + escape(planned) +
+                          '</strong> · ' + escape(source) + ' (' + escape(approval) + ') · план с ' + escape(planned) +
                           escape(event) + ' · ' + escape(confirmation) + '</li>')
         output.append("</ul></section>")
     return "".join(output)
