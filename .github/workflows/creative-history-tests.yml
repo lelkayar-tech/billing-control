@@ -1,0 +1,22 @@
+name: Creative history tests
+on:
+  pull_request:
+    paths:
+      - 'creative_history.py'
+      - 'tests/test_creative_history.py'
+      - '.github/workflows/creative-history-tests.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile Python files
+        run: python -m py_compile creative_history.py tests/test_creative_history.py
+      - name: Run isolated unit tests
+        run: python -m unittest discover -s tests -p 'test_creative_history.py' -v
