@@ -33,7 +33,7 @@ class CreativeHistoryTests(unittest.TestCase):
         self.assertEqual(len(history["100"]), 2)
         self.assertEqual(history["100"][1]["source_type"], "supplement")
         self.assertEqual(history["100"][1]["change_date"], "2026-08-10")
-        self.assertIn("ДС ДС1 к 100", render_history(records, 100))
+        self.assertIn("ДС1 к 100", render_history(records, 100))
 
     def test_different_places_are_not_merged(self):
         history = project_history([row(100, "100", "a", place="A"), row(100, "100", "b", place="B")])
