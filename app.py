@@ -34,7 +34,7 @@ from periods_photos import (
     normalize_photo_report_payload,
     photo_report_is_overdue,
 )
-from creative_history import read_export, render_history
+from creative_history import read_export, project_history, render_history
 
 from reader_auth import (
     SESSION_COOKIE_NAME,
@@ -2848,10 +2848,10 @@ def dashboard(
 
     # Optional, read-only Hermes export. No Supabase mutation or dependency.
     creative_csv_path = os.getenv("MKK_CREATIVES_CSV", "")
-    creative_rows = []
+    creative_history = {}
     if creative_csv_path and Path(creative_csv_path).is_file():
         try:
-            creative_rows = read_export(creative_csv_path)
+            creative_history = project_history(read_export(creative_csv_path))
         except (OSError, ValueError) as exc:
             print(f"Creative export unavailable: {exc}")
 
@@ -2888,11 +2888,11 @@ def dashboard(
         )
 
         creative_block = ""
-        if item["entity_name"] == "МКК" and creative_rows:
+        if item["entity_name"] == "МКК" and creative_history:
             creative_block = (
                 '<section class="panel panel-creatives">'
                 '<div class="panel-heading"><h3>Макеты и история замен</h3></div>'
-                + render_history(creative_rows, application["id"])
+                + render_history(creative_history, application["id"])
                 + '</section>'
             )
 
