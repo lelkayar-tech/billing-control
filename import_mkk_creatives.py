@@ -54,6 +54,22 @@ def main():
     if not url or not key:
         raise RuntimeError("Missing server-side Supabase credentials")
     client = create_client(url, key)
+    # Fail closed: every source and parent must exist and belong to MKK.
+    ids = sorted({r["source_application_id"] for r in payload} |
+                 {r["parent_application_id"] for r in payload})
+    allowed = set()
+    for start in range(0, len(ids), 100):
+        response = (client.table("applications")
+                    .select("id,legal_entity_id,legal_entities(name)")
+                    .in_("id", ids[start:start + 100]).execute())
+        for app in response.data or []:
+            entity = app.get("legal_entities") or {}
+            if entity.get("name") == "МКК":
+                allowed.add(int(app["id"]))
+    missing = set(ids) - allowed
+    if missing:
+        raise ValueError("Import blocked: non-MKK or missing application IDs: " +
+                         ", ".join(map(str, sorted(missing))))
     for start in range(0, len(payload), 100):
         client.table("mkk_creative_observations").upsert(
             payload[start:start + 100],
