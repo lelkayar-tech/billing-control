@@ -33,14 +33,14 @@ class CreativeHistoryTests(unittest.TestCase):
         self.assertEqual(len(history["100"]), 2)
         self.assertEqual(history["100"][1]["source_type"], "supplement")
         self.assertEqual(history["100"][1]["change_date"], "2026-08-10")
-        self.assertIn("ДС1 к 100", render_history(records, 100))
+        self.assertIn("ДС1 к 100", render_history(project_history(records), 100))
 
     def test_different_places_are_not_merged(self):
         history = project_history([row(100, "100", "a", place="A"), row(100, "100", "b", place="B")])
         self.assertEqual(len({x["place_id"] for x in history["100"]}), 2)
 
     def test_html_escaped(self):
-        self.assertIn("&lt;script&gt;", render_history([row(100, "100", "a", layout="<script>")], 100))
+        self.assertIn("&lt;script&gt;", render_history(project_history([row(100, "100", "a", layout="<script>")]), 100))
 
     def test_withdrawn_excluded(self):
         record = row(100, "100", "a")
