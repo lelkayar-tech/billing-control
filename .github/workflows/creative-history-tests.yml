@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'creative_history.py'
+      - 'import_mkk_creatives.py'
+      - 'app.py'
       - 'tests/test_creative_history.py'
       - '.github/workflows/creative-history-tests.yml'
   workflow_dispatch:
@@ -17,6 +19,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile Python files
-        run: python -m py_compile creative_history.py tests/test_creative_history.py
+        run: python -m py_compile creative_history.py import_mkk_creatives.py app.py tests/test_creative_history.py
       - name: Run isolated unit tests
         run: python -m unittest discover -s tests -p 'test_creative_history.py' -v
