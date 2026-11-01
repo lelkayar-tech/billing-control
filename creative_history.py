@@ -85,6 +85,8 @@ def render_history(history, application_id):
                     confirmation += " · с " + item["user_confirmed_from"]
             elif status == "current_layout_confirmed_by_user_date_unknown":
                 confirmation = "Макет подтверждён, дата установки неизвестна"
+            elif status == "document_only_renewal_not_confirmed":
+                confirmation = "Продление размещения существующего макета; фактическое размещение в период продления не подтверждено"
             elif status == "placement_ended_confirmed_by_user":
                 confirmation = "Размещение завершено (подтверждено)"
             else:
